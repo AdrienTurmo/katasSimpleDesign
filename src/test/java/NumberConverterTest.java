@@ -25,7 +25,6 @@ public class NumberConverterTest {
         assertThat(romanNumber).isEqualTo("X");
     }
 
-
     @Test
     public void arab_to_roman_should_return_L_when_passing_50() throws Exception {
         String romanNumber = NumberConverter.arabToRoman(50);
@@ -33,11 +32,25 @@ public class NumberConverterTest {
         assertThat(romanNumber).isEqualTo("L");
     }
 
-
     @Test
     public void arab_to_roman_should_return_C_when_passing_100() throws Exception {
         String romanNumber = NumberConverter.arabToRoman(100);
 
         assertThat(romanNumber).isEqualTo("C");
+    }
+
+    @Test
+    public void arab_to_roman_should_return_D_when_passing_500() throws Exception {
+        String romanNumber = NumberConverter.arabToRoman(500);
+
+        assertThat(romanNumber).isEqualTo("D");
+    }
+
+
+    @Test
+    public void arab_to_roman_should_return_M_when_passing_10() throws Exception {
+        String romanNumber = NumberConverter.arabToRoman(10);
+
+        assertThat(romanNumber).isEqualTo("X");
     }
 }
