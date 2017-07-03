@@ -8,6 +8,9 @@ public class NumberConverter {
         if (arabicNumber == 3) {
             return "III";
         }
+        if (arabicNumber == 4) {
+            return "IV";
+        }
         return RomanNumber.getRomanNumberFrom(arabicNumber);
     }
 }

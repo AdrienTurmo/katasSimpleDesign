@@ -69,4 +69,11 @@ public class NumberConverterTest {
         assertThat(romanNumber).isEqualTo("III");
     }
 
+
+    @Test
+    public void arab_to_roman_should_return_IV_when_passing_4() throws Exception {
+        String romanNumber = NumberConverter.arabToRoman(4);
+
+        assertThat(romanNumber).isEqualTo("IV");
+    }
 }
