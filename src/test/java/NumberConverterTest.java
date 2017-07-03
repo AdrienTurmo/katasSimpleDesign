@@ -83,4 +83,11 @@ public class NumberConverterTest {
 
         assertThat(romanNumber).isEqualTo("IV");
     }
+
+    @Test
+    public void arab_to_roman_should_return_XLIX_when_passing_949() throws Exception {
+        String romanNumber = NumberConverter.arabToRoman(949);
+
+        assertThat(romanNumber).isEqualTo("CMXLIX");
+    }
 }
