@@ -48,9 +48,9 @@ public class NumberConverterTest {
 
 
     @Test
-    public void arab_to_roman_should_return_M_when_passing_10() throws Exception {
-        String romanNumber = NumberConverter.arabToRoman(10);
+    public void arab_to_roman_should_return_M_when_passing_1000() throws Exception {
+        String romanNumber = NumberConverter.arabToRoman(1000);
 
-        assertThat(romanNumber).isEqualTo("X");
+        assertThat(romanNumber).isEqualTo("M");
     }
 }
