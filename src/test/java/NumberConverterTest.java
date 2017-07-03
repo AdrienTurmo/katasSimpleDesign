@@ -26,4 +26,11 @@ public class NumberConverterTest {
     }
 
 
+    @Test
+    public void arab_to_roman_should_return_L_when_passing_50() throws Exception {
+        String romanNumber = NumberConverter.arabToRoman(50);
+
+        assertThat(romanNumber).isEqualTo("L");
+    }
+
 }

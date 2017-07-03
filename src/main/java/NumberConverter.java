@@ -1,13 +1,15 @@
+import java.util.EnumSet;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class NumberConverter {
 
 
     public static String arabToRoman(int arabicNumber) {
-        if (arabicNumber == 1) {
-            return "I";
-        }
-        if (arabicNumber == 5) {
-            return "V";
-        }
-        return "X";
+        return Stream.of(RomanNumber.values())
+                .filter(romanNumber -> romanNumber.getArabicValue() == arabicNumber)
+                .findFirst()
+                .get()
+                .name();
     }
 }
