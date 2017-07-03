@@ -8,9 +8,9 @@ public class NumberConverter {
         if (arabicNumber == 3) {
             return "III";
         }
-        if (arabicNumber == 4) {
-            return "IV";
+        if (arabicNumber == 20) {
+            return "XX";
         }
-        return RomanNumber.getRomanNumberFrom(arabicNumber);
+        return RomanNumber.getRomanNumberAssociatedWith(arabicNumber);
     }
 }

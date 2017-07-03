@@ -20,7 +20,7 @@ public enum RomanNumber {
         return arabicValue;
     }
 
-    public static String getRomanNumberFrom(int arabicNumber) {
+    public static String getRomanNumberAssociatedWith(int arabicNumber) {
         return Stream.of(RomanNumber.values())
                 .filter(romanNumber -> romanNumber.getArabicValue() == arabicNumber)
                 .findFirst()
