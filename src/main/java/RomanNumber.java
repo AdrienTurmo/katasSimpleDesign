@@ -20,11 +20,11 @@ public enum RomanNumber {
         return arabicValue;
     }
 
-    public static String getRomanNumberAssociatedWith(int arabicNumber) {
+    public static RomanNumber getBiggestRomanNumberContainedInto(int arabicNumber) {
         return Stream.of(RomanNumber.values())
-                .filter(romanNumber -> romanNumber.getArabicValue() == arabicNumber)
+                .filter(romanNumber -> arabicNumber - romanNumber.getArabicValue() >= 0)
                 .findFirst()
-                .get()
-                .name();
+                .get();
     }
+
 }

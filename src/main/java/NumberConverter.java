@@ -1,30 +1,19 @@
-import java.util.stream.Stream;
-
 public class NumberConverter {
 
 
     public static String arabToRoman(int arabicNumber) {
         if (arabicNumber > 0) {
-            RomanNumber romanLetter = Stream.of(RomanNumber.values())
-                    .filter(romanNumber -> arabicNumber - romanNumber.getArabicValue() >= 0)
-                    .findFirst()
-                    .get();
+            RomanNumber romanLetter = RomanNumber.getBiggestRomanNumberContainedInto(arabicNumber);
 
-            return romanLetter.name() + arabToRoman(arabicNumber - romanLetter.getArabicValue());
-        } else {
-            return "";
+            int ratio = arabicNumber / romanLetter.getArabicValue();
+            if (ratio < 4) {
+                return romanLetter.name() + arabToRoman(arabicNumber - romanLetter.getArabicValue());
+            } else {
+                RomanNumber nextRomanLetter = RomanNumber.getBiggestRomanNumberContainedInto((romanLetter.getArabicValue() * 5));
+                return romanLetter.name() + nextRomanLetter.name() + arabToRoman(arabicNumber - 4 * romanLetter.getArabicValue());
+            }
+
         }
-        /*
-        if (arabicNumber == 2) {
-            return "II";
-        }
-        if (arabicNumber == 3) {
-            return "III";
-        }
-        if (arabicNumber == 20) {
-            return "XX";
-        }
-        return RomanNumber.getRomanNumberAssociatedWith(arabicNumber);
-        */
+        return "";
     }
 }
