@@ -53,4 +53,12 @@ public class NumberConverterTest {
 
         assertThat(romanNumber).isEqualTo("M");
     }
+
+
+    @Test
+    public void arab_to_roman_should_return_II_when_passing_2() throws Exception {
+        String romanNumber = NumberConverter.arabToRoman(2);
+
+        assertThat(romanNumber).isEqualTo("II");
+    }
 }
