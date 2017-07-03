@@ -33,4 +33,11 @@ public class NumberConverterTest {
         assertThat(romanNumber).isEqualTo("L");
     }
 
+
+    @Test
+    public void arab_to_roman_should_return_C_when_passing_100() throws Exception {
+        String romanNumber = NumberConverter.arabToRoman(100);
+
+        assertThat(romanNumber).isEqualTo("C");
+    }
 }
