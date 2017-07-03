@@ -10,4 +10,8 @@ public class NumberConverter {
         }
         return "";
     }
+
+    public static int romanToArab(String romanNumber) {
+        return RomanNumbers.valueOf(romanNumber).getArabicValue();
+    }
 }

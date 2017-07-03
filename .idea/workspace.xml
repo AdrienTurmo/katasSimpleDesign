@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85af525a-4662-437d-b371-f428ec68ee9c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/RomanNumber.java" afterPath="$PROJECT_DIR$/src/main/java/RomanNumbers.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/NumberConverter.java" afterPath="$PROJECT_DIR$/src/main/java/NumberConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/NumberConverterTest.java" afterPath="$PROJECT_DIR$/src/test/java/NumberConverterTest.java" />
@@ -23,11 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NumberConverter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NumberConverter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/NumberConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="350">
+              <caret line="14" column="66" lean-forward="false" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -43,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NumberConverterTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NumberConverterTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/NumberConverterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+            <state relative-caret-position="692">
+              <caret line="105" column="44" lean-forward="false" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -77,8 +75,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/RomanNumber.java" />
         <option value="$PROJECT_DIR$/src/main/java/RomanNumbers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/NumberConverter.java" />
         <option value="$PROJECT_DIR$/src/test/java/NumberConverterTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/NumberConverter.java" />
       </list>
     </option>
   </component>
@@ -584,26 +582,33 @@
       <option name="project" value="LOCAL" />
       <updated>1499093100208</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Convert any int to roman as a String">
+      <created>1499094154972</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1499094154972</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 45m 50s.xml">
-      <configuration name="NumberConverterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 46m 00s.xml">
-      <configuration name="NumberConverterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 46m 40s.xml">
-      <configuration name="NumberConverterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 47m 49s.xml">
-      <configuration name="NumberConverterTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="NumberConverterTest - 2017.07.03 at 17h 01m 30s.xml">
       <configuration name="NumberConverterTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="NumberConverterTest - 2017.07.03 at 17h 02m 06s.xml">
+      <configuration name="NumberConverterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NumberConverterTest - 2017.07.03 at 17h 04m 07s.xml">
+      <configuration name="NumberConverterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NumberConverterTest - 2017.07.03 at 17h 04m 12s.xml">
+      <configuration name="NumberConverterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NumberConverterTest - 2017.07.03 at 17h 05m 03s.xml">
+      <configuration name="NumberConverterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NumberConverterTest - 2017.07.03 at 17h 05m 43s.xml">
       <configuration name="NumberConverterTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="NumberConverterTest_arab_to_roman_should_return_IL_when_passing_49 - 2017.07.03 at 16h 49m 47s.xml">
@@ -670,7 +675,8 @@
     <MESSAGE value="convert 20 to XX" />
     <MESSAGE value="Refacto : introducing recursive method for arab to roman" />
     <MESSAGE value="Return IV for 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Return IV for 4" />
+    <MESSAGE value="Convert any int to roman as a String" />
+    <option name="LAST_COMMIT_MESSAGE" value="Convert any int to roman as a String" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -692,10 +698,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/NumberConverter.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/NumberConverterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="692">
+          <caret line="105" column="44" lean-forward="false" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -708,10 +714,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NumberConverterTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/NumberConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state relative-caret-position="350">
+          <caret line="14" column="66" lean-forward="false" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
           <folding />
         </state>
       </provider>

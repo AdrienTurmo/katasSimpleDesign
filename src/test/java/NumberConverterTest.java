@@ -90,4 +90,19 @@ public class NumberConverterTest {
 
         assertThat(romanNumber).isEqualTo("CMXLIX");
     }
+
+    @Test
+    public void roman_to_arab_should_return_1_when_passing_I() throws Exception {
+        int arabicNumber = NumberConverter.romanToArab("I");
+
+        assertThat(arabicNumber).isEqualTo(1);
+    }
+
+
+    @Test
+    public void roman_to_arab_should_return_5_when_passing_V() throws Exception {
+        int arabicNumber = NumberConverter.romanToArab("V");
+
+        assertThat(arabicNumber).isEqualTo(5);
+    }
 }
