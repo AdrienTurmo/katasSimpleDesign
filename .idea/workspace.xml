@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="85af525a-4662-437d-b371-f428ec68ee9c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/RomanNumber.java" afterPath="$PROJECT_DIR$/src/main/java/RomanNumber.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/NumberConverterTest.java" afterPath="$PROJECT_DIR$/src/test/java/NumberConverterTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,8 +44,8 @@
       <file leaf-file-name="NumberConverterTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/NumberConverterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+            <state relative-caret-position="567">
+              <caret line="53" column="45" lean-forward="true" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -474,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1499088898114</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="convert 500 to L">
+      <created>1499089001134</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1499089001134</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -551,7 +556,8 @@
     <MESSAGE value="convert 1, 5 and 10 to I, V and X" />
     <MESSAGE value="convert 50 to L" />
     <MESSAGE value="convert 100 to C" />
-    <option name="LAST_COMMIT_MESSAGE" value="convert 100 to C" />
+    <MESSAGE value="convert 500 to L" />
+    <option name="LAST_COMMIT_MESSAGE" value="convert 500 to L" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -590,8 +596,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/NumberConverterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+        <state relative-caret-position="567">
+          <caret line="53" column="45" lean-forward="true" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
           <folding />
         </state>
       </provider>
