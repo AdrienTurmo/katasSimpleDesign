@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/NumberConverter.java" afterPath="$PROJECT_DIR$/src/main/java/NumberConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/RomanNumber.java" afterPath="$PROJECT_DIR$/src/main/java/RomanNumber.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/NumberConverterTest.java" afterPath="$PROJECT_DIR$/src/test/java/NumberConverterTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,11 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NumberConverter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NumberConverter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/NumberConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="142">
+              <caret line="8" column="84" lean-forward="false" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -35,18 +34,18 @@
       <file leaf-file-name="RomanNumber.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/RomanNumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="22" column="53" lean-forward="false" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+            <state relative-caret-position="200">
+              <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NumberConverterTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NumberConverterTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/NumberConverterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="75" column="59" lean-forward="false" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
+            <state relative-caret-position="1275">
+              <caret line="54" column="33" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -74,9 +73,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/NumberConverterTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/RomanNumber.java" />
         <option value="$PROJECT_DIR$/src/main/java/NumberConverter.java" />
-        <option value="$PROJECT_DIR$/src/test/java/NumberConverterTest.java" />
       </list>
     </option>
   </component>
@@ -515,38 +514,45 @@
       <option name="project" value="LOCAL" />
       <updated>1499090282716</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="convert 20 to XX">
+      <created>1499091057722</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1499091057722</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="NumberConverterTest - 2017.07.03 at 15h 40m 30s.xml">
+    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 16m 38s.xml">
       <configuration name="NumberConverterTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NumberConverterTest - 2017.07.03 at 15h 55m 16s.xml">
+    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 17m 14s.xml">
       <configuration name="NumberConverterTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NumberConverterTest - 2017.07.03 at 15h 56m 04s.xml">
+    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 17m 28s.xml">
       <configuration name="NumberConverterTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NumberConverterTest - 2017.07.03 at 15h 56m 28s.xml">
+    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 18m 40s.xml">
       <configuration name="NumberConverterTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NumberConverterTest - 2017.07.03 at 15h 57m 33s.xml">
+    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 18m 56s.xml">
       <configuration name="NumberConverterTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NumberConverterTest - 2017.07.03 at 15h 57m 52s.xml">
+    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 20m 12s.xml">
       <configuration name="NumberConverterTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 08m 45s.xml">
+    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 20m 33s.xml">
       <configuration name="NumberConverterTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 09m 50s.xml">
+    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 25m 16s.xml">
       <configuration name="NumberConverterTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 10m 22s.xml">
+    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 25m 24s.xml">
       <configuration name="NumberConverterTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 10m 38s.xml">
+    <history-entry file="NumberConverterTest - 2017.07.03 at 16h 27m 40s.xml">
       <configuration name="NumberConverterTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -598,7 +604,9 @@
     <MESSAGE value="convert 2 to II" />
     <MESSAGE value="convert 3 to III" />
     <MESSAGE value="convert 4 to IV" />
-    <option name="LAST_COMMIT_MESSAGE" value="convert 4 to IV" />
+    <MESSAGE value="convert 20 to XX" />
+    <option name="LAST_COMMIT_MESSAGE" value="convert 20 to XX" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -617,26 +625,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/NumberConverter.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/NumberConverterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="1275">
+          <caret line="54" column="33" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RomanNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="22" column="53" lean-forward="false" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+        <state relative-caret-position="200">
+          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NumberConverterTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/NumberConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="75" column="59" lean-forward="false" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
+        <state relative-caret-position="142">
+          <caret line="8" column="84" lean-forward="false" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
           <folding />
         </state>
       </provider>
