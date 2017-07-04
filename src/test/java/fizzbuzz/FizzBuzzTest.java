@@ -40,4 +40,11 @@ public class FizzBuzzTest {
 
         assertThat(result).isEqualTo("Fizz");
     }
+
+    @Test
+    public void should_return_Buzz_for_5() throws Exception {
+        String result = FizzBuzz.fizzBuzzOf(5);
+
+        assertThat(result).isEqualTo("Buzz");
+    }
 }
