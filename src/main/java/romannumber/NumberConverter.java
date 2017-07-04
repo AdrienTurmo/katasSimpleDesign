@@ -9,21 +9,35 @@ public class NumberConverter {
 
 
     public static String arabToRoman(int arabicNumber) {
+
         if (arabicNumber > 0) {
             RomanNumbers romanLetter = RomanNumbers.getBiggestRomanNumberSmallerThan(arabicNumber);
 
             return romanLetter.name() + arabToRoman(arabicNumber - romanLetter.getArabicValue());
         }
+
         return "";
     }
 
     public static int romanToArab(String romanNumber) {
+
+        List<Integer> numberList = convertEachRomanLetterToTheirValue(romanNumber);
+
+        int sum = sumEachIndividualValueAccordingToTheRomanNumberRules(numberList);
+
+        return sum;
+    }
+
+    private static List<Integer> convertEachRomanLetterToTheirValue(String romanNumber) {
         List<Integer> numberList = new ArrayList<>();
 
         for (char c : romanNumber.toCharArray()) {
             numberList.add(RomanNumbers.valueOf(String.valueOf(c)).getArabicValue());
         }
+        return numberList;
+    }
 
+    private static int sumEachIndividualValueAccordingToTheRomanNumberRules(List<Integer> numberList) {
         int sum = 0;
 
         for (int index = 0; index < numberList.size()-1; index++) {
@@ -34,7 +48,6 @@ public class NumberConverter {
             }
         }
         sum += numberList.get(numberList.size()-1);
-
         return sum;
     }
 }
