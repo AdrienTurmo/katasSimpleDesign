@@ -55,4 +55,11 @@ public class FizzBuzzTest {
         assertThat(result).isEqualTo("FizzBuzz");
     }
 
+    @Test
+    public void should_return_FizzBuzz_for_30() throws Exception {
+        String result = FizzBuzz.fizzBuzzOf(30);
+
+        assertThat(result).isEqualTo("FizzBuzz");
+    }
+
 }
