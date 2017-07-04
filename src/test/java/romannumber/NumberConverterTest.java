@@ -100,7 +100,6 @@ public class NumberConverterTest {
         assertThat(arabicNumber).isEqualTo(1);
     }
 
-
     @Test
     public void roman_to_arab_should_return_5_when_passing_V() throws Exception {
         int arabicNumber = NumberConverter.romanToArab("V");
@@ -108,11 +107,31 @@ public class NumberConverterTest {
         assertThat(arabicNumber).isEqualTo(5);
     }
 
-
     @Test
     public void roman_to_arab_should_return_2_when_passing_II() throws Exception {
         int arabicNumber = NumberConverter.romanToArab("II");
 
         assertThat(arabicNumber).isEqualTo(2);
+    }
+
+    @Test
+    public void roman_to_arab_should_return_4_when_passing_IV() throws Exception {
+        int arabicNumber = NumberConverter.romanToArab("IV");
+
+        assertThat(arabicNumber).isEqualTo(4);
+    }
+
+    @Test
+    public void roman_to_arab_should_return_40_when_passing_XL() throws Exception {
+        int arabicNumber = NumberConverter.romanToArab("XL");
+
+        assertThat(arabicNumber).isEqualTo(40);
+    }
+
+    @Test
+    public void roman_to_arab_should_return_309_when_passing_CCCIX() throws Exception {
+        int arabicNumber = NumberConverter.romanToArab("CCCIX");
+
+        assertThat(arabicNumber).isEqualTo(309);
     }
 }
