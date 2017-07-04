@@ -3,7 +3,10 @@ package fizzbuzz;
 public class FizzBuzz {
 
     public static String fizzbuzz(int number) {
-        return "1";
+        if (number == 1) {
+            return "1";
+        }
+        return "2";
     }
 
 }

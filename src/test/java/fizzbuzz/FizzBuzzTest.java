@@ -12,4 +12,11 @@ public class FizzBuzzTest {
 
         assertThat(result).isEqualTo("1");
     }
+
+    @Test
+    public void should_return_2_for_2() throws Exception {
+        String result = FizzBuzz.fizzbuzz(2);
+
+        assertThat(result).isEqualTo("2");
+    }
 }
