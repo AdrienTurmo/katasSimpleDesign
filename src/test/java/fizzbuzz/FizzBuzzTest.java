@@ -33,4 +33,11 @@ public class FizzBuzzTest {
 
         assertThat(result).isEqualTo("Fizz");
     }
+
+    @Test
+    public void should_return_fizz_for_6() throws Exception {
+        String result = FizzBuzz.fizzBuzzOf(6);
+
+        assertThat(result).isEqualTo("Fizz");
+    }
 }
