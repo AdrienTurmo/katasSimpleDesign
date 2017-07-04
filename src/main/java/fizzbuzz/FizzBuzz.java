@@ -3,10 +3,7 @@ package fizzbuzz;
 public class FizzBuzz {
 
     public static String fizzBuzzOf(int number) {
-        if (number == 15) {
-            return "FizzBuzz";
-        }
-        if (number == 30) {
+        if (number % 15 == 0) {
             return "FizzBuzz";
         }
         if (number % 5 == 0) {
