@@ -49,9 +49,10 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_return_Buzz_for_10() throws Exception {
-        String result = FizzBuzz.fizzBuzzOf(10);
+    public void should_return_FizzBuzz_for_15() throws Exception {
+        String result = FizzBuzz.fizzBuzzOf(15);
 
-        assertThat(result).isEqualTo("Buzz");
+        assertThat(result).isEqualTo("FizzBuzz");
     }
+
 }
