@@ -39,4 +39,15 @@ public class TennisGameTest {
 
         assertThat(score).isEqualTo("Love-Fifty");
     }
+
+
+    @Test
+    public void should_return_15_All_if_player1_scoredthen_player2() throws Exception {
+        tennisGame.playerOneScored();
+        tennisGame.playerTwoScored();
+
+        String score = tennisGame.printScore();
+
+        assertThat(score).isEqualTo("Fifty-All");
+    }
 }

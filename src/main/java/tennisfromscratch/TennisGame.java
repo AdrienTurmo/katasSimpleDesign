@@ -1,5 +1,7 @@
 package tennisfromscratch;
 
+import java.util.Objects;
+
 public class TennisGame {
 
     String gameScore = "Love-All";
@@ -13,6 +15,10 @@ public class TennisGame {
     }
 
     public void playerTwoScored() {
-        gameScore = "Love-Fifty";
+        if (Objects.equals(gameScore, "Fifty-Love")) {
+            gameScore = "Fifty-All";
+        } else {
+            gameScore = "Love-Fifty";
+        }
     }
 }
