@@ -3,16 +3,18 @@ package tennisfromscratch;
 public enum TennisScore {
     ThirtyLove("Thirty-Love"),
     FifteenAll("Fifteen-All"),
-    FifteenLove("Fifteen-Love",ThirtyLove),
-    LoveFifteen("Love-Fifteen",FifteenAll),
-    LoveAll("Love-All",FifteenLove);
+    FifteenLove("Fifteen-Love",ThirtyLove, FifteenAll),
+    LoveFifteen("Love-Fifteen",FifteenAll, FifteenAll),
+    LoveAll("Love-All",FifteenLove, LoveFifteen);
 
     private String name;
     private TennisScore nextScoreIfPlayerOneScore;
+    private TennisScore nextScoreIfPlayerTwoScore;
 
-    TennisScore(String name, TennisScore score) {
+    TennisScore(String name, TennisScore nextScoreIfPlayerOneScore, TennisScore nextScoreIfPlayerTwoScore) {
         this.name = name;
-        this.nextScoreIfPlayerOneScore = score;
+        this.nextScoreIfPlayerOneScore = nextScoreIfPlayerOneScore;
+        this.nextScoreIfPlayerTwoScore = nextScoreIfPlayerTwoScore;
     }
 
     TennisScore(String name) {
@@ -26,5 +28,9 @@ public enum TennisScore {
 
     public TennisScore playerOneScored() {
         return nextScoreIfPlayerOneScore;
+    }
+
+    public TennisScore playerTwoScored() {
+        return nextScoreIfPlayerTwoScore;
     }
 }
