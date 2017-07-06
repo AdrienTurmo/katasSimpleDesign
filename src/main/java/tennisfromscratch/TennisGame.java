@@ -2,27 +2,30 @@ package tennisfromscratch;
 
 import java.util.Objects;
 
+import static tennisfromscratch.TennisScore.*;
+
 public class TennisGame {
 
-    String gameScore = "Love-All";
+    TennisScore gameScore = LoveAll;
 
     public String printScore() {
-        return gameScore;
+        return gameScore.toString();
     }
 
     public void playerOneScored() {
-        if (Objects.equals(gameScore, "Love-Fifty")) {
-            gameScore = "Fifty-All";
+
+        if (gameScore == LoveFifty) {
+            gameScore = FiftyAll;
         } else {
-            gameScore = "Fifty-Love";
+            gameScore = FiftyLove;
         }
     }
 
     public void playerTwoScored() {
-        if (Objects.equals(gameScore, "Fifty-Love")) {
-            gameScore = "Fifty-All";
+        if (gameScore == FiftyLove) {
+            gameScore = FiftyAll;
         } else {
-            gameScore = "Love-Fifty";
+            gameScore = LoveFifty;
         }
     }
 }
