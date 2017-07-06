@@ -11,7 +11,11 @@ public class TennisGame {
     }
 
     public void playerOneScored() {
-        gameScore = "Fifty-Love";
+        if (Objects.equals(gameScore, "Love-Fifty")) {
+            gameScore = "Fifty-All";
+        } else {
+            gameScore = "Fifty-Love";
+        }
     }
 
     public void playerTwoScored() {

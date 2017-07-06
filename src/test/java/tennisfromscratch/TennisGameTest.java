@@ -40,11 +40,20 @@ public class TennisGameTest {
         assertThat(score).isEqualTo("Love-Fifty");
     }
 
-
     @Test
-    public void should_return_15_All_if_player1_scoredthen_player2() throws Exception {
+    public void should_return_15_All_if_player1_scored_then_player2() throws Exception {
         tennisGame.playerOneScored();
         tennisGame.playerTwoScored();
+
+        String score = tennisGame.printScore();
+
+        assertThat(score).isEqualTo("Fifty-All");
+    }
+
+    @Test
+    public void should_return_15_All_if_player2_scored_then_player1() throws Exception {
+        tennisGame.playerTwoScored();
+        tennisGame.playerOneScored();
 
         String score = tennisGame.printScore();
 
