@@ -11,14 +11,7 @@ public class TennisGame {
     }
 
     public void playerOneScored() {
-
-        if (gameScore == LoveFifteen) {
-            gameScore = FifteenAll;
-        } else if (gameScore == FifteenLove) {
-            gameScore = ThirtyLove;
-        } else {
-            gameScore = FifteenLove;
-        }
+        gameScore = gameScore.playerOneScored();
     }
 
     public void playerTwoScored() {
