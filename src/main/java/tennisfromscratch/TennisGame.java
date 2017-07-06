@@ -11,4 +11,8 @@ public class TennisGame {
     public void playerOneScored() {
         gameScore = "Fifty-Love";
     }
+
+    public void playerTwoScored() {
+        gameScore = "Love-Fifty";
+    }
 }

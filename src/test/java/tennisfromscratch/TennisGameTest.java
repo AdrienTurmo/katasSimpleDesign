@@ -29,4 +29,14 @@ public class TennisGameTest {
 
         assertThat(score).isEqualTo("Fifty-Love");
     }
+
+
+    @Test
+    public void should_return_0_15_if_player1_scored() throws Exception {
+        tennisGame.playerTwoScored();
+
+        String score = tennisGame.printScore();
+
+        assertThat(score).isEqualTo("Love-Fifty");
+    }
 }
