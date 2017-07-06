@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.fail;
 
 @RunWith(Parameterized.class)
 public class TennisGameTest {
@@ -41,6 +42,9 @@ public class TennisGameTest {
 
                 { new Integer[]{1,2}, "Fifteen-All" },
                 { new Integer[]{2,1}, "Fifteen-All" },
+
+                { new Integer[]{1,1,2}, "Thirty-Fifteen" },
+                { new Integer[]{1,2,1}, "Thirty-Fifteen" },
 
         });
     }
