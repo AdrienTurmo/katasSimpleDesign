@@ -36,6 +36,7 @@ public class TennisGameTest {
                 { new Integer[]{2,1}, "Fifteen-All" },
                 { new Integer[]{1,1}, "Thirty-Love" },
                 { new Integer[]{2,2}, "Love-Thirty" },
+                { new Integer[]{1,1,1}, "Forty-Love" },
         });
     }
 
