@@ -1,7 +1,5 @@
 package tennisfromscratch;
 
-import java.util.Objects;
-
 import static tennisfromscratch.TennisScore.*;
 
 public class TennisGame {
@@ -14,18 +12,20 @@ public class TennisGame {
 
     public void playerOneScored() {
 
-        if (gameScore == LoveFifty) {
-            gameScore = FiftyAll;
+        if (gameScore == LoveFifteen) {
+            gameScore = FifteenAll;
+        } else if (gameScore == FifteenLove) {
+            gameScore = ThirtyLove;
         } else {
-            gameScore = FiftyLove;
+            gameScore = FifteenLove;
         }
     }
 
     public void playerTwoScored() {
-        if (gameScore == FiftyLove) {
-            gameScore = FiftyAll;
+        if (gameScore == FifteenLove) {
+            gameScore = FifteenAll;
         } else {
-            gameScore = LoveFifty;
+            gameScore = LoveFifteen;
         }
     }
 }

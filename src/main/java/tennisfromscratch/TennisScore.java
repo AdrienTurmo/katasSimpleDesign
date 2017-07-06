@@ -1,10 +1,11 @@
 package tennisfromscratch;
 
 public enum TennisScore {
-    FiftyAll("Fifty-All"),
-    FiftyLove("Fifty-Love"),
-    LoveFifty("Love-Fifty"),
-    LoveAll("Love-All");
+    FifteenAll("Fifteen-All"),
+    FifteenLove("Fifteen-Love"),
+    LoveFifteen("Love-Fifteen"),
+    LoveAll("Love-All"),
+    ThirtyLove("Thirty-Love");
 
     private String name;
 

@@ -27,7 +27,7 @@ public class TennisGameTest {
 
         String score = tennisGame.printScore();
 
-        assertThat(score).isEqualTo("Fifty-Love");
+        assertThat(score).isEqualTo("Fifteen-Love");
     }
 
 
@@ -37,7 +37,7 @@ public class TennisGameTest {
 
         String score = tennisGame.printScore();
 
-        assertThat(score).isEqualTo("Love-Fifty");
+        assertThat(score).isEqualTo("Love-Fifteen");
     }
 
     @Test
@@ -47,7 +47,7 @@ public class TennisGameTest {
 
         String score = tennisGame.printScore();
 
-        assertThat(score).isEqualTo("Fifty-All");
+        assertThat(score).isEqualTo("Fifteen-All");
     }
 
     @Test
@@ -57,6 +57,16 @@ public class TennisGameTest {
 
         String score = tennisGame.printScore();
 
-        assertThat(score).isEqualTo("Fifty-All");
+        assertThat(score).isEqualTo("Fifteen-All");
+    }
+
+    @Test
+    public void should_return_30_0_if_player1_scored_twice() throws Exception {
+        tennisGame.playerOneScored();
+        tennisGame.playerOneScored();
+
+        String score = tennisGame.printScore();
+
+        assertThat(score).isEqualTo("Thirty-Love");
     }
 }
