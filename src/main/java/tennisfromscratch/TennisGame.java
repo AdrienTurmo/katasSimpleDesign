@@ -1,7 +1,14 @@
 package tennisfromscratch;
 
 public class TennisGame {
-    public static String printScore() {
-        return "Love-All";
+
+    String gameScore = "Love-All";
+
+    public String printScore() {
+        return gameScore;
+    }
+
+    public void playerOneScored() {
+        gameScore = "Fifty-Love";
     }
 }
