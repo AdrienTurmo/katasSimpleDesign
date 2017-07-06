@@ -2,71 +2,60 @@ package tennisfromscratch;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import java.util.Arrays;
+import java.util.Collection;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@RunWith(Parameterized.class)
 public class TennisGameTest {
-
-    TennisGame tennisGame;
+    private TennisGame tennisGame;
+    private Integer[] scoreSequence;
+    private String expectedScore;
 
     @Before
     public void setUp() throws Exception {
         tennisGame = new TennisGame();
     }
 
-    @Test
-    public void should_return_Love_all_at_the_start_of_the_game() throws Exception {
-        String score = tennisGame.printScore();
+    public TennisGameTest(Integer[] scoreSequence, String expectedScore) {
+        this.scoreSequence = scoreSequence;
+        this.expectedScore = expectedScore;
+    }
 
-        assertThat(score).isEqualTo("Love-All");
+    @Parameterized.Parameters
+    public static Collection tennisGameSequence() {
+        return Arrays.asList(new Object[][] {
+                { new Integer[]{}, "Love-All" },
+                { new Integer[]{1}, "Fifteen-Love" },
+                { new Integer[]{2}, "Love-Fifteen" },
+                { new Integer[]{1,2}, "Fifteen-All" },
+                { new Integer[]{2,1}, "Fifteen-All" },
+                { new Integer[]{1,1}, "Thirty-Love" },
+                { new Integer[]{2,2}, "Love-Thirty" },
+        });
+    }
+
+    public void checkAllSequence(TennisGame game) {
+        for (int whoScored : scoreSequence) {
+            switch (whoScored) {
+                case 1 :
+                    game.playerOneScored();
+                    break;
+                case 2 :
+                    game.playerTwoScored();
+                    break;
+            }
+        }
+        assertThat(game.printScore()).isEqualTo(expectedScore);
     }
 
     @Test
-    public void should_return_15_0_if_player1_scored() throws Exception {
-        tennisGame.playerOneScored();
-
-        String score = tennisGame.printScore();
-
-        assertThat(score).isEqualTo("Fifteen-Love");
+    public void should_return_correct_score() throws Exception {
+        checkAllSequence(tennisGame);
     }
 
-
-    @Test
-    public void should_return_0_15_if_player1_scored() throws Exception {
-        tennisGame.playerTwoScored();
-
-        String score = tennisGame.printScore();
-
-        assertThat(score).isEqualTo("Love-Fifteen");
-    }
-
-    @Test
-    public void should_return_15_All_if_player1_scored_then_player2() throws Exception {
-        tennisGame.playerOneScored();
-        tennisGame.playerTwoScored();
-
-        String score = tennisGame.printScore();
-
-        assertThat(score).isEqualTo("Fifteen-All");
-    }
-
-    @Test
-    public void should_return_15_All_if_player2_scored_then_player1() throws Exception {
-        tennisGame.playerTwoScored();
-        tennisGame.playerOneScored();
-
-        String score = tennisGame.printScore();
-
-        assertThat(score).isEqualTo("Fifteen-All");
-    }
-
-    @Test
-    public void should_return_30_0_if_player1_scored_twice() throws Exception {
-        tennisGame.playerOneScored();
-        tennisGame.playerOneScored();
-
-        String score = tennisGame.printScore();
-
-        assertThat(score).isEqualTo("Thirty-Love");
-    }
 }
