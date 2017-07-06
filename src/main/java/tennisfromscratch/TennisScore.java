@@ -1,8 +1,9 @@
 package tennisfromscratch;
 
 public enum TennisScore {
+    LoveForty("Love-Forty"),
     FortyLove("Forty-Love"),
-    LoveThirty("Love-Thirty"),
+    LoveThirty("Love-Thirty",LoveForty,LoveForty),
     ThirtyLove("Thirty-Love",FortyLove,FortyLove),
     FifteenAll("Fifteen-All"),
     FifteenLove("Fifteen-Love",ThirtyLove, FifteenAll),

@@ -30,13 +30,18 @@ public class TennisGameTest {
     public static Collection tennisGameSequence() {
         return Arrays.asList(new Object[][] {
                 { new Integer[]{}, "Love-All" },
+
                 { new Integer[]{1}, "Fifteen-Love" },
+                { new Integer[]{1,1}, "Thirty-Love" },
+                { new Integer[]{1,1,1}, "Forty-Love" },
+
                 { new Integer[]{2}, "Love-Fifteen" },
+                { new Integer[]{2,2}, "Love-Thirty" },
+                { new Integer[]{2,2,2}, "Love-Forty" },
+
                 { new Integer[]{1,2}, "Fifteen-All" },
                 { new Integer[]{2,1}, "Fifteen-All" },
-                { new Integer[]{1,1}, "Thirty-Love" },
-                { new Integer[]{2,2}, "Love-Thirty" },
-                { new Integer[]{1,1,1}, "Forty-Love" },
+
         });
     }
 
