@@ -10,8 +10,8 @@ public enum TennisScore {
     FortyThirty("Forty-Thirty", WinPlayerOne, FortyForty),
     ThirtyForty("Thirty-Forty", FortyForty, WinPlayerTwo),
     ThirtyThirty("Thirty-All", FortyThirty, ThirtyForty),
-    FortyFifteen("Forty-Fifteen",  WinPlayerOne, FortyThirty),
-    FifteenForty("Fifteen-Forty",ThirtyForty, WinPlayerTwo),
+    FortyFifteen("Forty-Fifteen", WinPlayerOne, FortyThirty),
+    FifteenForty("Fifteen-Forty", ThirtyForty, WinPlayerTwo),
     FifteenThirty("Fifteen-Thirty", ThirtyThirty, FifteenForty),
     ThirtyFifteen("Thirty-Fifteen", FortyFifteen, ThirtyThirty),
     LoveForty("Love-Forty", FifteenForty, WinPlayerTwo),
@@ -43,15 +43,23 @@ public enum TennisScore {
     }
 
     public TennisScore playerOneScored() {
-        if (this == Deuce) {
-            return AdvantagePlayerOne;
+        switch (this) {
+            case Deuce:
+                return AdvantagePlayerOne;
+            case WinPlayerOne:
+            case WinPlayerTwo:
+                return this;
         }
         return nextScoreIfPlayerOneScore;
     }
 
     public TennisScore playerTwoScored() {
-        if (this == Deuce) {
-            return AdvantagePlayerTwo;
+        switch (this) {
+            case Deuce:
+                return AdvantagePlayerTwo;
+            case WinPlayerOne:
+            case WinPlayerTwo:
+                return this;
         }
         return nextScoreIfPlayerTwoScore;
     }
