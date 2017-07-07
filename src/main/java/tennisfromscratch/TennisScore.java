@@ -4,7 +4,7 @@ public enum TennisScore {
     WinPlayerOne("Player One Wins"),
     WinPlayerTwo("Player Two Wins"),
     ThirtyThirty("Thirty-All"),
-    FortyFifteen("Forty-Fifteen"),
+    FortyFifteen("Forty-Fifteen",WinPlayerOne,WinPlayerOne),
     FifteenForty("Fifteen-Forty"),
     FifteenThirty("Fifteen-Thirty",ThirtyThirty,FifteenForty),
     ThirtyFifteen("Thirty-Fifteen",FortyFifteen,ThirtyThirty),
