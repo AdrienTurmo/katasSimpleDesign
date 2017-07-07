@@ -50,6 +50,9 @@ public enum TennisScore {
     }
 
     public TennisScore playerTwoScored() {
+        if (this == Deuce) {
+            return AdvantagePlayerTwo;
+        }
         return nextScoreIfPlayerTwoScore;
     }
 }
