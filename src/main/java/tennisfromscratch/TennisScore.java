@@ -3,8 +3,9 @@ package tennisfromscratch;
 public enum TennisScore {
     WinPlayerOne("Player One Wins"),
     WinPlayerTwo("Player Two Wins"),
-    FortyThirty("Forty-Thirty",WinPlayerOne,WinPlayerOne),
-    ThirtyForty("Thirty-Forty",WinPlayerTwo,WinPlayerTwo),
+    FortyForty("Forty-All"),
+    FortyThirty("Forty-Thirty",WinPlayerOne,FortyForty),
+    ThirtyForty("Thirty-Forty",FortyForty,WinPlayerTwo),
     ThirtyThirty("Thirty-All",FortyThirty,ThirtyForty),
     FortyFifteen("Forty-Fifteen",WinPlayerOne,FortyThirty),
     FifteenForty("Fifteen-Forty",ThirtyForty,WinPlayerTwo),
