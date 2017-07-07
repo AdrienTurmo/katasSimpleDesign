@@ -44,14 +44,17 @@ public class TennisGameTest {
                 {new Integer[]{1, 2}, "Fifteen-All"},
                 {new Integer[]{2, 1}, "Fifteen-All"},
 
-                {new Integer[]{1, 1, 2, 1}, "Forty-Fifteen"},
-                {new Integer[]{1, 1, 1, 2}, "Forty-Fifteen"},
-
                 {new Integer[]{1, 2, 1}, "Thirty-Fifteen"},
                 {new Integer[]{1, 2, 1}, "Thirty-Fifteen"},
 
                 {new Integer[]{2, 2, 1}, "Fifteen-Thirty"},
                 {new Integer[]{2, 1, 2}, "Fifteen-Thirty"},
+
+                {new Integer[]{1, 1, 2, 1}, "Forty-Fifteen"},
+                {new Integer[]{1, 1, 1, 2}, "Forty-Fifteen"},
+
+                {new Integer[]{2, 2, 2, 1}, "Fifteen-Forty"},
+                {new Integer[]{2, 2, 1, 2}, "Fifteen-Forty"},
         });
     }
 
