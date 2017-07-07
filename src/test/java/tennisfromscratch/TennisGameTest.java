@@ -67,6 +67,8 @@ public class TennisGameTest {
                 {new Integer[]{2, 2, 2, 1, 1, 2}, "Player Two Wins"},
                 {new Integer[]{2, 2, 2, 1, 1, 1}, "Forty-All"},
                 {new Integer[]{1, 1, 1, 2, 2, 2}, "Forty-All"},
+
+                {new Integer[]{1, 1, 1, 2, 2, 2, 1}, "Advantage Player One"},
         });
     }
 
