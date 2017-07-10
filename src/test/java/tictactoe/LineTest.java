@@ -51,4 +51,16 @@ public class LineTest {
 
         assertThat(values).isEqualTo(expectedValues);
     }
+
+    @Test
+    public void should_put_O_in_the_right_cell() throws Exception {
+        Line line = new Line();
+
+        line.put(Symbol.O,2);
+
+        String[] values = line.stringify();
+        String[] expectedValues = {" ", " ", "O"};
+
+        assertThat(values).isEqualTo(expectedValues);
+    }
 }
