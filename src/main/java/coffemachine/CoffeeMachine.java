@@ -14,13 +14,11 @@ public class CoffeeMachine {
 
     public void order(Order order) {
         if (order.equals(new Order(Drink.Coffee))) {
-            coffeeMaker.send("C::");
+            coffeeMaker.send(Drink.Coffee.getMakerCode()+"::");
         } else if (order.equals(new Order(Drink.Tea))) {
-            coffeeMaker.send("T::");
+            coffeeMaker.send(Drink.Tea.getMakerCode()+"::");
         } else {
-            coffeeMaker.send("H::");
+            coffeeMaker.send(Drink.Chocolate.getMakerCode()+"::");
         }
-
-
     }
 }
