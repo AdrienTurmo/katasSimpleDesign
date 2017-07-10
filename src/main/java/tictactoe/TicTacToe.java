@@ -12,4 +12,7 @@ public class TicTacToe {
         printer.print(board);
     }
 
+    public void nextPlayAt(Position position) {
+        board.put(Symbol.X ,position);
+    }
 }
