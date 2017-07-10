@@ -16,13 +16,8 @@ public class CoffeeMachine {
     public void order(Order order) {
         if (order.getMoneyGiven() == 0) {
 
-            if (order.getDrink() == Drink.Coffee) {
-                coffeeMaker.send("M: There is 0,6€ missing");
-            } else if (order.getDrink() == Drink.Tea){
-                coffeeMaker.send("M: There is 0,4€ missing");
-            } else {
-                coffeeMaker.send("M: There is 0,5€ missing");
-            }
+            coffeeMaker.send("M: There is " + order.getDrink().getPrice() +"€ missing");
+
         } else {
 
             String message = String.format("%s:%s:%s"

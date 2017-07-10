@@ -80,7 +80,7 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(coffeeOrder);
 
-        Mockito.verify(coffeeMaker).send("M: There is 0,6€ missing");
+        Mockito.verify(coffeeMaker).send("M: There is 0.6€ missing");
     }
 
     @Test
@@ -89,7 +89,7 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(teaOrder);
 
-        Mockito.verify(coffeeMaker).send("M: There is 0,4€ missing");
+        Mockito.verify(coffeeMaker).send("M: There is 0.4€ missing");
     }
 
     @Test
@@ -98,6 +98,6 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(order);
 
-        Mockito.verify(coffeeMaker).send("M: There is 0,5€ missing");
+        Mockito.verify(coffeeMaker).send("M: There is 0.5€ missing");
     }
 }
