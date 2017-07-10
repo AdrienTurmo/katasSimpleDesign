@@ -18,8 +18,10 @@ public class CoffeeMachine {
 
             if (order.getDrink() == Drink.Coffee) {
                 coffeeMaker.send("M: There is 0,6€ missing");
-            } else {
+            } else if (order.getDrink() == Drink.Tea){
                 coffeeMaker.send("M: There is 0,4€ missing");
+            } else {
+                coffeeMaker.send("M: There is 0,5€ missing");
             }
         } else {
 

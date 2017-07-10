@@ -91,4 +91,13 @@ public class CoffeeMachineTest {
 
         Mockito.verify(coffeeMaker).send("M: There is 0,4€ missing");
     }
+
+    @Test
+    public void should_send_a_message_with_the_price_if_no_money_is_given_for_a_chocolate() throws Exception {
+        Order order = new Order(Drink.Chocolate,0, 0);
+
+        coffeeMachine.order(order);
+
+        Mockito.verify(coffeeMaker).send("M: There is 0,5€ missing");
+    }
 }
