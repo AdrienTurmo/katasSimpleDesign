@@ -9,7 +9,9 @@ public class Order {
         this.drink = drink;
     }
 
-
+    public Drink getDrink() {
+        return drink;
+    }
 
     @Override
     public boolean equals(Object o) {
