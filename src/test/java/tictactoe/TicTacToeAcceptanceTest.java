@@ -92,4 +92,5 @@ public class TicTacToeAcceptanceTest {
             assertThat(alreadyFilledCaseError.getMessage()).isEqualTo("You can't play here");
         }
     }
+
 }

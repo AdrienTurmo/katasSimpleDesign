@@ -23,4 +23,8 @@ public class Board {
     public void put(Symbol symbol, Position position) throws AlreadyFilledCaseError {
         lines[position.getLineNumber()].put(symbol,position.getColumnNumber());
     }
+
+    public boolean isFilled() {
+        return false;
+    }
 }

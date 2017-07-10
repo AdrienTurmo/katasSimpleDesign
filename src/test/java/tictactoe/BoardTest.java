@@ -179,4 +179,14 @@ public class BoardTest {
 
         assertThat(values).isEqualTo(expectedValues);
     }
+
+    @Test
+    public void should_return_that_the_board_is_not_filled() throws Exception {
+        Board board = new Board();
+
+        board.put(Symbol.O,Position.MIDDLEMIDDLE);
+        board.put(Symbol.O,Position.BOTTOMMIDDLE);
+
+        assertThat(board.isFilled()).isFalse();
+    }
 }
