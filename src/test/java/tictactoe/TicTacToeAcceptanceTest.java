@@ -66,4 +66,19 @@ public class TicTacToeAcceptanceTest {
         inOrder.verify(out).println("-----");
         inOrder.verify(out).println(" | | ");
     }
+
+    @Test
+    public void first_player_plays_X_in_the_top_left_and_the_second_player_plays_O_in_the_middle() throws Exception {
+        ticTacToeGame.nextPlayAt(Position.TOPLEFT);
+        ticTacToeGame.nextPlayAt(Position.MIDDLEMIDDLE);
+
+        ticTacToeGame.printBoard(boardPrinter);
+
+        InOrder inOrder = Mockito.inOrder(out);
+        inOrder.verify(out).println("X| | ");
+        inOrder.verify(out).println("-----");
+        inOrder.verify(out).println(" |O| ");
+        inOrder.verify(out).println("-----");
+        inOrder.verify(out).println(" | | ");
+    }
 }
