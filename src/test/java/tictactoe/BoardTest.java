@@ -163,4 +163,20 @@ public class BoardTest {
 
         assertThat(values).isEqualTo(expectedValues);
     }
+
+    @Test
+    public void should_return_a_table_with_only_one_O_in_the_bottom_right_of_the_board() throws Exception {
+        Board board = new Board();
+
+        board.put(Symbol.O,Position.MIDDLEMIDDLE);
+
+        String[][] values = board.stringify();
+        String[][] expectedValues = {
+                {" ", " ", " "},
+                {" ", "O", " "},
+                {" ", " ", " "}
+        };
+
+        assertThat(values).isEqualTo(expectedValues);
+    }
 }
