@@ -14,12 +14,17 @@ public class CoffeeMachine {
     }
 
     public void order(Order order) {
-        String message = String.format("%s:%s:%s"
-                , order.getDrink().getMakerCode()
-                , numberOfSugar(order)
-                , isAStickNeeded(order));
+        if (order.getMoneyGiven() == 0) {
+            coffeeMaker.send("M: There is 0,6€ missing");
+        } else {
 
-        coffeeMaker.send(message);
+            String message = String.format("%s:%s:%s"
+                    , order.getDrink().getMakerCode()
+                    , numberOfSugar(order)
+                    , isAStickNeeded(order));
+
+            coffeeMaker.send(message);
+        }
     }
 
     private String isAStickNeeded(Order order) {

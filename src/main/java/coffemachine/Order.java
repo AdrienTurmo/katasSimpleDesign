@@ -1,14 +1,14 @@
 package coffemachine;
 
-import java.util.Objects;
-
 public class Order {
     private Drink drink;
     private int numberOfSugar;
+    private int moneyGiven;
 
-    public Order(Drink drink, int numberOfSugar) {
+    public Order(Drink drink, int numberOfSugar, int moneyGiven) {
         this.drink = drink;
         this.numberOfSugar = numberOfSugar;
+        this.moneyGiven = moneyGiven;
     }
 
     public Drink getDrink() {
@@ -19,4 +19,7 @@ public class Order {
         return numberOfSugar;
     }
 
+    public int getMoneyGiven() {
+        return moneyGiven;
+    }
 }
