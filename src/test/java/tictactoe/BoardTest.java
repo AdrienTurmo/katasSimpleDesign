@@ -21,13 +21,15 @@ public class BoardTest {
     }
 
     @Test
-    public void should_return_a_table_of_the_value_in_the_board() throws Exception {
+    public void should_return_a_table_with_only_one_X_in_the_middle_in_the_board() throws Exception {
         Board board = new Board();
+
+        board.put(Symbol.X,Position.MIDDLE);
 
         String[][] values = board.stringify();
         String[][] expectedValues = {
                 {" ", " ", " "},
-                {" ", " ", " "},
+                {" ", "X", " "},
                 {" ", " ", " "}
         };
 
