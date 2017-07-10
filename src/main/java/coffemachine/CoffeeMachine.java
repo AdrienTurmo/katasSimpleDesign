@@ -19,7 +19,7 @@ public class CoffeeMachine {
         message = order.getDrink().getMakerCode();
         message += FIELD_SEPARATOR;
         if (order.getNumberOfSugar() > 0) {
-            message += "1";
+            message += order.getNumberOfSugar();
         }
         message += FIELD_SEPARATOR;
         if (order.getNumberOfSugar() > 0) {
