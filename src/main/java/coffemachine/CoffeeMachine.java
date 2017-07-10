@@ -11,4 +11,8 @@ public class CoffeeMachine {
     public void order() {
         coffeeMaker.send("M: No order");
     }
+
+    public void order(Order coffeeOrder) {
+        coffeeMaker.send("C::");
+    }
 }

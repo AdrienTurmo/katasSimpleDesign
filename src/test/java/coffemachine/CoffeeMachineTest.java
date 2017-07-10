@@ -28,4 +28,13 @@ public class CoffeeMachineTest {
 
         Mockito.verify(coffeeMaker).send("M: No order");
     }
+
+    @Test
+    public void should_send_order_for_a_coffee() throws Exception {
+        Order coffeeOrder = new Order(Drink.Coffee);
+
+        coffeeMachine.order(coffeeOrder);
+
+        Mockito.verify(coffeeMaker).send("C::");
+    }
 }
