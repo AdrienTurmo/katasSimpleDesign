@@ -21,6 +21,6 @@ public class Board {
     }
 
     public void put(Symbol symbol, Position position) {
-        lines[position.getLineNumber()].put(symbol,position.getLineNumber());
+        lines[position.getLineNumber()].put(symbol,position.getColumnNumber());
     }
 }
