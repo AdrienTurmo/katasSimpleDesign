@@ -2,7 +2,6 @@ package coffemachine;
 
 public class CoffeeMachine {
 
-    public static final String FIELD_SEPARATOR = ":";
     private CoffeeMaker coffeeMaker;
 
     public CoffeeMachine(CoffeeMaker coffeeMaker) {
@@ -14,9 +13,11 @@ public class CoffeeMachine {
     }
 
     public void order(Order order) {
-        if (order.getMoneyGiven() == 0) {
+        double missingMoney = drinkPriceMinusMoneyGiven(order);
 
-            coffeeMaker.send("M: There is " + order.getDrink().getPrice() +"€ missing");
+        if (missingMoney > 0) {
+
+            coffeeMaker.send("M: There is " + missingMoney +"€ missing");
 
         } else {
 
@@ -27,6 +28,10 @@ public class CoffeeMachine {
 
             coffeeMaker.send(message);
         }
+    }
+
+    private double drinkPriceMinusMoneyGiven(Order order) {
+        return order.getDrink().getPrice()-order.getMoneyGiven();
     }
 
     private String isAStickNeeded(Order order) {

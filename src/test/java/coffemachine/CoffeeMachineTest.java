@@ -31,7 +31,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_order_for_a_coffee() throws Exception {
-        Order coffeeOrder = new Order(Drink.Coffee, 0, 1);
+        Order coffeeOrder = new Order(Drink.Coffee, 0, 0.6);
 
         coffeeMachine.order(coffeeOrder);
 
@@ -99,5 +99,14 @@ public class CoffeeMachineTest {
         coffeeMachine.order(order);
 
         Mockito.verify(coffeeMaker).send("M: There is 0.5€ missing");
+    }
+
+    @Test
+    public void should_send_a_message_with_the_money_missing_if_not_enough_money_given() throws Exception {
+        Order order = new Order(Drink.Chocolate,0, 0.2);
+
+        coffeeMachine.order(order);
+
+        Mockito.verify(coffeeMaker).send("M: There is 0.3€ missing");
     }
 }

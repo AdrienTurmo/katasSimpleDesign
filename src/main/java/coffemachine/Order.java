@@ -3,9 +3,9 @@ package coffemachine;
 public class Order {
     private Drink drink;
     private int numberOfSugar;
-    private int moneyGiven;
+    private double moneyGiven;
 
-    public Order(Drink drink, int numberOfSugar, int moneyGiven) {
+    public Order(Drink drink, int numberOfSugar, double moneyGiven) {
         this.drink = drink;
         this.numberOfSugar = numberOfSugar;
         this.moneyGiven = moneyGiven;
@@ -19,7 +19,7 @@ public class Order {
         return numberOfSugar;
     }
 
-    public int getMoneyGiven() {
+    public double getMoneyGiven() {
         return moneyGiven;
     }
 }
