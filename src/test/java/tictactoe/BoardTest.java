@@ -21,7 +21,7 @@ public class BoardTest {
     }
 
     @Test
-    public void should_return_a_table_with_only_one_X_in_the_top_left_of_the_board() throws Exception, AlreadyFilledCaseError {
+    public void should_return_a_table_with_only_one_X_in_the_top_left_of_the_board() throws Exception {
         Board board = new Board();
 
         board.put(Symbol.X,Position.TOPLEFT);
@@ -37,7 +37,7 @@ public class BoardTest {
     }
 
     @Test
-    public void should_return_a_table_with_only_one_X_in_the_top_middle_of_the_board() throws Exception, AlreadyFilledCaseError {
+    public void should_return_a_table_with_only_one_X_in_the_top_middle_of_the_board() throws Exception {
         Board board = new Board();
 
         board.put(Symbol.X,Position.TOPMIDDLE);
@@ -53,7 +53,7 @@ public class BoardTest {
     }
 
     @Test
-    public void should_return_a_table_with_only_one_X_in_the_top_right_of_the_board() throws Exception, AlreadyFilledCaseError {
+    public void should_return_a_table_with_only_one_X_in_the_top_right_of_the_board() throws Exception {
         Board board = new Board();
 
         board.put(Symbol.X,Position.TOPRIGHT);
@@ -69,7 +69,7 @@ public class BoardTest {
     }
 
     @Test
-    public void should_return_a_table_with_only_one_X_in_the_middle_left_of_the_board() throws Exception, AlreadyFilledCaseError {
+    public void should_return_a_table_with_only_one_X_in_the_middle_left_of_the_board() throws Exception {
         Board board = new Board();
 
         board.put(Symbol.X,Position.MIDDLELEFT);
@@ -85,7 +85,7 @@ public class BoardTest {
     }
 
     @Test
-    public void should_return_a_table_with_only_one_X_in_the_middle_of_the_board() throws Exception, AlreadyFilledCaseError {
+    public void should_return_a_table_with_only_one_X_in_the_middle_of_the_board() throws Exception {
         Board board = new Board();
 
         board.put(Symbol.X,Position.MIDDLEMIDDLE);
@@ -101,7 +101,7 @@ public class BoardTest {
     }
 
     @Test
-    public void should_return_a_table_with_only_one_X_in_the_middle_right_of_the_board() throws Exception, AlreadyFilledCaseError {
+    public void should_return_a_table_with_only_one_X_in_the_middle_right_of_the_board() throws Exception {
         Board board = new Board();
 
         board.put(Symbol.X,Position.MIDDLERIGHT);
@@ -117,7 +117,7 @@ public class BoardTest {
     }
 
     @Test
-    public void should_return_a_table_with_only_one_X_in_the_bottom_left_of_the_board() throws Exception, AlreadyFilledCaseError {
+    public void should_return_a_table_with_only_one_X_in_the_bottom_left_of_the_board() throws Exception {
         Board board = new Board();
 
         board.put(Symbol.X,Position.BOTTOMLEFT);
@@ -133,7 +133,7 @@ public class BoardTest {
     }
 
     @Test
-    public void should_return_a_table_with_only_one_X_in_the_bottom_middle_of_the_board() throws Exception, AlreadyFilledCaseError {
+    public void should_return_a_table_with_only_one_X_in_the_bottom_middle_of_the_board() throws Exception {
         Board board = new Board();
 
         board.put(Symbol.X,Position.BOTTOMMIDDLE);
@@ -149,7 +149,7 @@ public class BoardTest {
     }
 
     @Test
-    public void should_return_a_table_with_only_one_X_in_the_bottom_right_of_the_board() throws Exception, AlreadyFilledCaseError {
+    public void should_return_a_table_with_only_one_X_in_the_bottom_right_of_the_board() throws Exception {
         Board board = new Board();
 
         board.put(Symbol.X,Position.BOTTOMRIGHT);
@@ -165,7 +165,7 @@ public class BoardTest {
     }
 
     @Test
-    public void should_return_a_table_with_only_one_O_in_the_bottom_right_of_the_board() throws Exception, AlreadyFilledCaseError {
+    public void should_return_a_table_with_only_one_O_in_the_bottom_right_of_the_board() throws Exception {
         Board board = new Board();
 
         board.put(Symbol.O,Position.MIDDLEMIDDLE);

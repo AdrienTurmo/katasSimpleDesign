@@ -82,11 +82,14 @@ public class TicTacToeAcceptanceTest {
         inOrder.verify(out).println(" | | ");
     }
 
-    @Test(expected = AlreadyFilledCaseError.class)
+    @Test
     public void if_plays_in_an_already_filled_cell_return_specific_error() throws Exception {
-        ticTacToeGame.nextPlayAt(Position.TOPLEFT);
         ticTacToeGame.nextPlayAt(Position.MIDDLEMIDDLE);
 
-        ticTacToeGame.printBoard(boardPrinter);
+        try {
+            ticTacToeGame.nextPlayAt(Position.MIDDLEMIDDLE);
+        } catch (AlreadyFilledCaseError alreadyFilledCaseError) {
+            assertThat(alreadyFilledCaseError.getMessage()).isEqualTo("You can't play here");
+        }
     }
 }

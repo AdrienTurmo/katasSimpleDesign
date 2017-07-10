@@ -1,11 +1,11 @@
 package tictactoe;
 
-public class AlreadyFilledCaseError extends Throwable {
+public class AlreadyFilledCaseError extends Exception {
 
     private String message;
 
-    public AlreadyFilledCaseError(String message) {
-        this.message = message;
+    public AlreadyFilledCaseError() {
+        this.message = "You can't play here";
     }
 
     @Override

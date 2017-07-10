@@ -14,12 +14,8 @@ public class TicTacToe {
         printer.print(board);
     }
 
-    public void nextPlayAt(Position position) {
-        try {
+    public void nextPlayAt(Position position) throws AlreadyFilledCaseError {
             board.put(currentSymbol,position);
-        } catch (AlreadyFilledCaseError alreadyFilledCaseError) {
-            alreadyFilledCaseError.printStackTrace();
             currentSymbol = currentSymbol.changeToTheOther();
-        }
     }
 }
