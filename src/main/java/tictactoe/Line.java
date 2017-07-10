@@ -26,4 +26,11 @@ public class Line {
         cells[columnNumber].put(symbol);
     }
 
+    public boolean isFilled() {
+        boolean filled = false;
+        for (Cell cell : cells) {
+            filled = filled||cell.isFilled();
+        }
+        return filled;
+    }
 }

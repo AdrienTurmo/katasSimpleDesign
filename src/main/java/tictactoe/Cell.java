@@ -25,4 +25,8 @@ public class Cell {
         }
         content = Optional.of(symbol);
     }
+
+    public boolean isFilled() {
+        return content.isPresent();
+    }
 }

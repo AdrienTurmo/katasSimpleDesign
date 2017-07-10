@@ -189,4 +189,21 @@ public class BoardTest {
 
         assertThat(board.isFilled()).isFalse();
     }
+
+    @Test
+    public void should_return_that_the_board_is_filled() throws Exception {
+        Board board = new Board();
+
+        board.put(Symbol.O,Position.TOPLEFT);
+        board.put(Symbol.O,Position.TOPMIDDLE);
+        board.put(Symbol.O,Position.TOPRIGHT);
+        board.put(Symbol.O,Position.MIDDLELEFT);
+        board.put(Symbol.O,Position.MIDDLEMIDDLE);
+        board.put(Symbol.O,Position.MIDDLERIGHT);
+        board.put(Symbol.O,Position.BOTTOMLEFT);
+        board.put(Symbol.O,Position.BOTTOMMIDDLE);
+        board.put(Symbol.O,Position.BOTTOMRIGHT);
+
+        assertThat(board.isFilled()).isTrue();
+    }
 }

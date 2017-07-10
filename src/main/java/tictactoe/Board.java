@@ -25,6 +25,13 @@ public class Board {
     }
 
     public boolean isFilled() {
-        return false;
+        boolean filled = false;
+
+        for (Line line : lines) {
+            filled = filled||line.isFilled();
+        }
+
+        return  filled;
     }
+
 }

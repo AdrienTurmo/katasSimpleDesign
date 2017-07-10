@@ -63,4 +63,15 @@ public class LineTest {
 
         assertThat(values).isEqualTo(expectedValues);
     }
+
+    @Test
+    public void isFilled_should_return_true_if_all_cells_are_filled() throws Exception {
+        Line line = new Line();
+
+        line.put(Symbol.O,0);
+        line.put(Symbol.O,1);
+        line.put(Symbol.O,2);
+
+        assertThat(line.isFilled()).isTrue();
+    }
 }
