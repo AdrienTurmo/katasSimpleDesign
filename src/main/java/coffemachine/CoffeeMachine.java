@@ -15,9 +15,12 @@ public class CoffeeMachine {
     public void order(Order order) {
         if (order.equals(new Order(Drink.Coffee))) {
             coffeeMaker.send("C::");
-        } else {
+        } else if (order.equals(new Order(Drink.Tea))) {
             coffeeMaker.send("T::");
+        } else {
+            coffeeMaker.send("H::");
         }
+
 
     }
 }
