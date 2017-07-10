@@ -28,4 +28,15 @@ public class LineTest {
         assertThat(values).isEqualTo(expectedValues);
     }
 
+    @Test
+    public void should_put_X_in_the_middle_cell() throws Exception {
+        Line line = new Line();
+
+        line.put(Symbol.X,1);
+
+        String[] values = line.stringify();
+        String[] expectedValues = {" ", "X", " "};
+
+        assertThat(values).isEqualTo(expectedValues);
+    }
 }

@@ -23,6 +23,6 @@ public class Line {
     }
 
     public void put(Symbol symbol, int columnNumber) {
-        cells[0] = new Cell(symbol.name());
+        cells[columnNumber] = new Cell(symbol.name());
     }
 }
