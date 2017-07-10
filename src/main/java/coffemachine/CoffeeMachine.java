@@ -14,17 +14,23 @@ public class CoffeeMachine {
     }
 
     public void order(Order order) {
-        String message = "";
+        String message = String.format("%s:%s:%s"
+                , order.getDrink().getMakerCode()
+                , numberOfSugar(order)
+                , isAStickNeeded(order));
 
-        message = order.getDrink().getMakerCode();
-        message += FIELD_SEPARATOR;
-        if (order.getNumberOfSugar() > 0) {
-            message += order.getNumberOfSugar();
-        }
-        message += FIELD_SEPARATOR;
-        if (order.getNumberOfSugar() > 0) {
-            message += "0";
-        }
         coffeeMaker.send(message);
     }
+
+    private String isAStickNeeded(Order order) {
+        int numberOfSugar = order.getNumberOfSugar();
+        return numberOfSugar > 0 ? "0" : "";
+    }
+
+    private String numberOfSugar(Order order) {
+        int numberOfSugar = order.getNumberOfSugar();
+        return numberOfSugar > 0 ? numberOfSugar + "" : "";
+    }
+
+
 }
