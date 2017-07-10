@@ -2,6 +2,7 @@ package coffemachine;
 
 public class CoffeeMachine {
 
+    public static final String FIELD_SEPARATOR = ":";
     private CoffeeMaker coffeeMaker;
 
     public CoffeeMachine(CoffeeMaker coffeeMaker) {
@@ -13,6 +14,17 @@ public class CoffeeMachine {
     }
 
     public void order(Order order) {
-        coffeeMaker.send(order.getDrink().getMakerCode()+"::");
+        String message = "";
+
+        message = order.getDrink().getMakerCode();
+        message += FIELD_SEPARATOR;
+        if (order.getNumberOfSugar() > 0) {
+            message += "1";
+        }
+        message += FIELD_SEPARATOR;
+        if (order.getNumberOfSugar() > 0) {
+            message += "0";
+        }
+        coffeeMaker.send(message);
     }
 }

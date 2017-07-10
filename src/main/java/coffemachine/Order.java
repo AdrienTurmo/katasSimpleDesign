@@ -4,25 +4,19 @@ import java.util.Objects;
 
 public class Order {
     private Drink drink;
+    private int numberOfSugar;
 
-    public Order(Drink drink) {
+    public Order(Drink drink, int numberOfSugar) {
         this.drink = drink;
+        this.numberOfSugar = numberOfSugar;
     }
 
     public Drink getDrink() {
         return drink;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Order order = (Order) o;
-        return drink == order.drink;
+    public int getNumberOfSugar() {
+        return numberOfSugar;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(drink);
-    }
 }

@@ -31,7 +31,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_order_for_a_coffee() throws Exception {
-        Order coffeeOrder = new Order(Drink.Coffee);
+        Order coffeeOrder = new Order(Drink.Coffee, 0);
 
         coffeeMachine.order(coffeeOrder);
 
@@ -40,7 +40,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_order_for_a_tea() throws Exception {
-        Order teaOrder = new Order(Drink.Tea);
+        Order teaOrder = new Order(Drink.Tea, 0);
 
         coffeeMachine.order(teaOrder);
 
@@ -49,10 +49,19 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_order_for_a_chocolate() throws Exception {
-        Order chocolateOrder = new Order(Drink.Chocolate);
+        Order chocolateOrder = new Order(Drink.Chocolate, 0);
 
         coffeeMachine.order(chocolateOrder);
 
         Mockito.verify(coffeeMaker).send("H::");
+    }
+
+    @Test
+    public void should_send_order_for_a_chocolate_with_a_sugar_and_therefore_a_stick() throws Exception {
+        Order chocolateOrder = new Order(Drink.Chocolate,1);
+
+        coffeeMachine.order(chocolateOrder);
+
+        Mockito.verify(coffeeMaker).send("H:1:0");
     }
 }
