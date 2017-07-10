@@ -21,6 +21,6 @@ public class Board {
     }
 
     public void put(Symbol symbol, Position position) {
-        lines[1].put(symbol,1);
+        lines[position.getLineNumber()].put(symbol,position.getLineNumber());
     }
 }

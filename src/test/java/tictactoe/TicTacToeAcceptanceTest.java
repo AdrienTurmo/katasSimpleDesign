@@ -55,7 +55,7 @@ public class TicTacToeAcceptanceTest {
 
     @Test
     public void first_player_plays_in_the_top_left() throws Exception {
-        ticTacToeGame.nextPlayAt(Position.MIDDLE);
+        ticTacToeGame.nextPlayAt(Position.TOPLEFT);
 
         ticTacToeGame.printBoard(boardPrinter);
 

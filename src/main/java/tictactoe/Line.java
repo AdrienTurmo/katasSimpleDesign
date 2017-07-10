@@ -25,4 +25,5 @@ public class Line {
     public void put(Symbol symbol, int columnNumber) {
         cells[columnNumber].put(symbol);
     }
+
 }
