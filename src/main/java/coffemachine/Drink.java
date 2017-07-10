@@ -1,5 +1,5 @@
 package coffemachine;
 
 public enum Drink {
-    Coffee
+    Tea, Coffee
 }

@@ -12,7 +12,12 @@ public class CoffeeMachine {
         coffeeMaker.send("M: No order");
     }
 
-    public void order(Order coffeeOrder) {
-        coffeeMaker.send("C::");
+    public void order(Order order) {
+        if (order.equals(new Order(Drink.Coffee))) {
+            coffeeMaker.send("C::");
+        } else {
+            coffeeMaker.send("T::");
+        }
+
     }
 }
