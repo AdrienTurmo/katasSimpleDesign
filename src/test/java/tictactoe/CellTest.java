@@ -3,6 +3,8 @@ package tictactoe;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class CellTest {
 
@@ -31,5 +33,18 @@ public class CellTest {
         Cell cell = new Cell();
         cell.put(Symbol.X);
         cell.put(Symbol.X);
+    }
+
+    @Test
+    public void should_be_empty() throws Exception {
+        Cell cell = new Cell();
+        assertFalse(cell.isFilled());
+    }
+
+    @Test
+    public void should_be_filled() throws Exception {
+        Cell cell = new Cell();
+        cell.put(Symbol.X);
+        assertTrue(cell.isFilled());
     }
 }

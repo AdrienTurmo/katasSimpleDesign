@@ -25,10 +25,10 @@ public class Board {
     }
 
     public boolean isFilled() {
-        boolean filled = false;
+        boolean filled = true;
 
         for (Line line : lines) {
-            filled = filled||line.isFilled();
+            filled = filled&&line.isFilled();
         }
 
         return  filled;

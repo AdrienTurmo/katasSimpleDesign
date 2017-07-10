@@ -1,7 +1,5 @@
 package tictactoe;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 public class Line {
 
     public static final int NUMBER_OF_COLUMNS = 3;
@@ -27,9 +25,9 @@ public class Line {
     }
 
     public boolean isFilled() {
-        boolean filled = false;
+        boolean filled = true;
         for (Cell cell : cells) {
-            filled = filled||cell.isFilled();
+            filled = filled && cell.isFilled();
         }
         return filled;
     }
