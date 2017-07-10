@@ -1,30 +1,25 @@
 package tictactoe;
 
-import java.util.Objects;
+import java.util.Optional;
 
 public class Cell {
 
-    private String content = " ";
+    private Optional<Symbol> content;
 
-    public Cell(String content) {
-        this.content = content;
+    public Cell() {
+        content = Optional.empty();
     }
 
     @Override
     public String toString() {
-        return content;
+        if (content.isPresent()) {
+            return content.get().name();
+        }
+        return " ";
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Cell cell = (Cell) o;
-        return Objects.equals(content, cell.content);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(content);
+    public void put(Symbol symbol) {
+        content = Optional.of(symbol);
     }
 }

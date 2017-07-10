@@ -10,7 +10,7 @@ public class Line {
     public Line() {
         this.cells = new Cell[NUMBER_OF_COLUMNS];
         for (int index = 0; index < NUMBER_OF_COLUMNS; index++) {
-            cells[index] = new Cell(" ");
+            cells[index] = new Cell();
         }
     }
 
@@ -23,6 +23,6 @@ public class Line {
     }
 
     public void put(Symbol symbol, int columnNumber) {
-        cells[columnNumber] = new Cell(symbol.name());
+        cells[columnNumber].put(symbol);
     }
 }
