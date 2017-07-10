@@ -75,11 +75,20 @@ public class CoffeeMachineTest {
     }
 
     @Test
-    public void should_send_a_message_with_the_price_if_no_money_is_given() throws Exception {
-        Order coffeeWithTwoSugarsOrder = new Order(Drink.Coffee,2, 0);
+    public void should_send_a_message_with_the_price_if_no_money_is_given_for_a_coffee() throws Exception {
+        Order coffeeOrder = new Order(Drink.Coffee,0, 0);
 
-        coffeeMachine.order(coffeeWithTwoSugarsOrder);
+        coffeeMachine.order(coffeeOrder);
 
         Mockito.verify(coffeeMaker).send("M: There is 0,6€ missing");
+    }
+
+    @Test
+    public void should_send_a_message_with_the_price_if_no_money_is_given_for_a_tea() throws Exception {
+        Order teaOrder = new Order(Drink.Tea,0, 0);
+
+        coffeeMachine.order(teaOrder);
+
+        Mockito.verify(coffeeMaker).send("M: There is 0,4€ missing");
     }
 }
