@@ -17,7 +17,7 @@ public class LineTest {
     }
 
     @Test
-    public void should_put_X_in_the_left_cell() throws Exception {
+    public void should_put_X_in_the_left_cell() throws Exception, AlreadyFilledCaseError {
         Line line = new Line();
 
         line.put(Symbol.X,0);
@@ -29,7 +29,7 @@ public class LineTest {
     }
 
     @Test
-    public void should_put_X_in_the_middle_cell() throws Exception {
+    public void should_put_X_in_the_middle_cell() throws Exception, AlreadyFilledCaseError {
         Line line = new Line();
 
         line.put(Symbol.X,1);
@@ -41,7 +41,7 @@ public class LineTest {
     }
 
     @Test
-    public void should_put_X_in_the_right_cell() throws Exception {
+    public void should_put_X_in_the_right_cell() throws Exception, AlreadyFilledCaseError {
         Line line = new Line();
 
         line.put(Symbol.X,2);
@@ -53,7 +53,7 @@ public class LineTest {
     }
 
     @Test
-    public void should_put_O_in_the_right_cell() throws Exception {
+    public void should_put_O_in_the_right_cell() throws Exception, AlreadyFilledCaseError {
         Line line = new Line();
 
         line.put(Symbol.O,2);

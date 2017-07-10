@@ -19,7 +19,10 @@ public class Cell {
     }
 
 
-    public void put(Symbol symbol) {
+    public void put(Symbol symbol) throws AlreadyFilledCaseError{
+        if (content.isPresent()) {
+            throw new AlreadyFilledCaseError("You can't play here");
+        }
         content = Optional.of(symbol);
     }
 }

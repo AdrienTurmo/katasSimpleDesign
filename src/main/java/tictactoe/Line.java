@@ -22,7 +22,7 @@ public class Line {
         return  stringedCell;
     }
 
-    public void put(Symbol symbol, int columnNumber) {
+    public void put(Symbol symbol, int columnNumber) throws AlreadyFilledCaseError {
         cells[columnNumber].put(symbol);
     }
 

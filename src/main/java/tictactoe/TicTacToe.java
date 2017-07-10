@@ -15,7 +15,11 @@ public class TicTacToe {
     }
 
     public void nextPlayAt(Position position) {
-        board.put(currentSymbol,position);
-        currentSymbol = currentSymbol.changeToTheOther();
+        try {
+            board.put(currentSymbol,position);
+        } catch (AlreadyFilledCaseError alreadyFilledCaseError) {
+            alreadyFilledCaseError.printStackTrace();
+            currentSymbol = currentSymbol.changeToTheOther();
+        }
     }
 }

@@ -88,6 +88,5 @@ public class TicTacToeAcceptanceTest {
         ticTacToeGame.nextPlayAt(Position.MIDDLEMIDDLE);
 
         ticTacToeGame.printBoard(boardPrinter);
-
     }
 }
