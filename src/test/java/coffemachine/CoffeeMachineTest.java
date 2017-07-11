@@ -1,6 +1,7 @@
 package coffemachine;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -215,29 +216,49 @@ public class CoffeeMachineTest {
     public void should_print_a_revenue_of_0_if_nothing_was_ordered() throws Exception {
         coffeeMachine.printReport();
 
-        verify(printer).print("Nothing sold yet.");
         verify(printer).print("Total earned : 0€");
     }
 
     @Test
-    public void should_print_unitary_print_for_one_tea_sold() throws Exception {
+    public void should_print_unitary_price_for_one_tea_sold() throws Exception {
         Order order = new Order(Drink.Tea,1, false, 1.0);
         coffeeMachine.order(order);
 
         coffeeMachine.printReport();
 
-        verify(printer).print("Teas sold : 1");
         verify(printer).print("Total earned : 0.4€");
     }
 
     @Test
-    public void should_print_unitary_print_for_one_coffee_sold() throws Exception {
+    public void should_print_unitary_price_for_one_coffee_sold() throws Exception {
         Order order = new Order(Drink.Coffee,0, false, 1.0);
         coffeeMachine.order(order);
 
         coffeeMachine.printReport();
 
-        verify(printer).print("Coffees sold : 1");
         verify(printer).print("Total earned : 0.6€");
+    }
+
+    @Test
+    public void should_print_the_price_for_two_coffee_sold() throws Exception {
+        Order firstOrder = new Order(Drink.Coffee,0, false, 1.0);
+        Order secondOrder = new Order(Drink.Coffee,1, false, 1.0);
+        coffeeMachine.order(firstOrder);
+        coffeeMachine.order(secondOrder);
+
+        coffeeMachine.printReport();
+
+        verify(printer).print("Total earned : 1.2€");
+    }
+
+    @Ignore
+    @Test
+    public void should_print_the_price_for_one_coffee_and_one_irangeJuice_sold() throws Exception {
+        Order order = new Order(Drink.Coffee,0, false, 1.0);
+        coffeeMachine.order(order);
+
+        coffeeMachine.printReport();
+
+        verify(printer).print("Total earned : 1.2€");
     }
 }

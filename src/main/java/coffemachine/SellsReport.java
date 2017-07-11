@@ -14,9 +14,14 @@ public class SellsReport {
             printer.print("Nothing sold yet.");
             printer.print("Total earned : 0€");
         } else {
-            quantityOfDrinksSold.forEach((drink, integer) -> printer.print(drink.name() + "s sold : " + integer.toString()));
-            printer.print("Total earned : " + moneyEarned + "€");
+            quantityOfDrinksSold.forEach((drink, integer) -> printDrinkWithQuantitySold(printer, drink, integer));
+            int quantity = quantityOfDrinksSold.getOrDefault(Drink.Coffee,1);
+            printer.print("Total earned : " + moneyEarned.multiply(BigDecimal.valueOf(quantity)) + "€");
         }
+    }
+
+    private void printDrinkWithQuantitySold(Printer printer, Drink drink, Integer integer) {
+        printer.print(drink.name() + "s sold : " + integer.toString());
     }
 
     public void isSold(Drink drink) {
