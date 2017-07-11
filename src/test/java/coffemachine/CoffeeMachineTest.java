@@ -136,4 +136,13 @@ public class CoffeeMachineTest {
 
         Mockito.verify(coffeeMaker).send("Ch::");
     }
+
+    @Test
+    public void should_send_a_message_for_an_extra_hot_chocolate_with_one_sugar() throws Exception {
+        Order order = new Order(Drink.Chocolate,1, true, 1.0);
+
+        coffeeMachine.order(order);
+
+        Mockito.verify(coffeeMaker).send("Hh:1:0");
+    }
 }

@@ -17,9 +17,11 @@ public class CoffeeMachine {
     public void order(Order order) {
         Double missingMoney = drinkPriceMinusMoneyGiven(order);
 
+        String message = "";
+
         if (missingMoney > 0) {
 
-            coffeeMaker.send("M: There is " + missingMoney + "€ missing");
+            message = "M: There is " + missingMoney + "€ missing";
 
         } else {
 
@@ -28,14 +30,15 @@ public class CoffeeMachine {
             String numberOfSugar = numberOfSugar(order);
             String stick = isAStickNeeded(order);
 
-            String message = String.format("%s%s:%s:%s"
+            message = String.format("%s%s:%s:%s"
                     , drinkCode
                     , extraHot
                     , numberOfSugar
                     , stick);
 
-            coffeeMaker.send(message);
         }
+
+        coffeeMaker.send(message);
     }
 
     private String isTheDrinkExtraHot(Order order) {
