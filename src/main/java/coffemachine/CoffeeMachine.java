@@ -29,20 +29,28 @@ public class CoffeeMachine {
 
         } else {
 
-            String drinkCode = order.getDrink().getMakerCode();
-            String extraHot = isTheDrinkExtraHot(order);
-            String numberOfSugar = numberOfSugar(order);
-            String stick = isAStickNeeded(order);
-
-            message = String.format("%s%s:%s:%s"
-                    , drinkCode
-                    , extraHot
-                    , numberOfSugar
-                    , stick);
+            message = formatOrder(order);
+            sellsReport.isSold(order);
 
         }
 
         coffeeMaker.send(message);
+    }
+
+
+    private String formatOrder(Order order) {
+        String message;
+        String drinkCode = order.getDrink().getMakerCode();
+        String extraHot = isTheDrinkExtraHot(order);
+        String numberOfSugar = numberOfSugar(order);
+        String stick = isAStickNeeded(order);
+
+        message = String.format("%s%s:%s:%s"
+                , drinkCode
+                , extraHot
+                , numberOfSugar
+                , stick);
+        return message;
     }
 
     private String isTheDrinkExtraHot(Order order) {
