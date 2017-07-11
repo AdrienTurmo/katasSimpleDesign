@@ -218,4 +218,15 @@ public class CoffeeMachineTest {
         verify(printer).print("Nothing sold yet.");
         verify(printer).print("Total earned : 0€");
     }
+
+    @Test
+    public void should_print_unitary_print_for_one_drink_sold() throws Exception {
+        Order order = new Order(Drink.Tea,1, false, 1.0);
+        coffeeMachine.order(order);
+
+        coffeeMachine.printReport();
+
+        verify(printer).print("Teas sold : 1");
+        verify(printer).print("Total earned : 0.4€");
+    }
 }

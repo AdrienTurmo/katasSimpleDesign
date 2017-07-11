@@ -10,10 +10,11 @@ public class SellsReport {
     public void print(Printer printer) {
         if (quantityOfDrinksSold.isEmpty()) {
             printer.print("Nothing sold yet.");
+            printer.print("Total earned : 0€");
         } else {
             quantityOfDrinksSold.forEach((drink, integer) -> printer.print(drink.name() + "s sold : " + integer.toString()));
+            printer.print("Total earned : 0.4€");
         }
-        printer.print("Total earned : 0€");
     }
 
     public void isSold(Drink drink) {
