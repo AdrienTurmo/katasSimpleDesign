@@ -4,29 +4,32 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CoffeeMachineTest {
 
     @Mock
     CoffeeMaker coffeeMaker;
+    @Mock
+    Printer printer;
+
 
     CoffeeMachine coffeeMachine;
 
     @Before
     public void setUp() throws Exception {
-        coffeeMachine = new CoffeeMachine(coffeeMaker);
+        coffeeMachine = new CoffeeMachine(coffeeMaker, printer);
     }
 
     @Test
     public void should_send_no_order() throws Exception {
         coffeeMachine.order();
 
-        Mockito.verify(coffeeMaker).send("M: No order");
+        verify(coffeeMaker).send("M: No order");
     }
 
     @Test
@@ -35,7 +38,7 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(coffeeOrder);
 
-        Mockito.verify(coffeeMaker).send("C::");
+        verify(coffeeMaker).send("C::");
     }
 
     @Test
@@ -44,7 +47,7 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(teaOrder);
 
-        Mockito.verify(coffeeMaker).send("T::");
+        verify(coffeeMaker).send("T::");
     }
 
     @Test
@@ -53,7 +56,7 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(chocolateOrder);
 
-        Mockito.verify(coffeeMaker).send("H::");
+        verify(coffeeMaker).send("H::");
     }
 
     @Test
@@ -62,7 +65,7 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(chocolateWithASugarOrder);
 
-        Mockito.verify(coffeeMaker).send("H:1:0");
+        verify(coffeeMaker).send("H:1:0");
     }
 
     @Test
@@ -71,7 +74,7 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(coffeeWithTwoSugarsOrder);
 
-        Mockito.verify(coffeeMaker).send("C:2:0");
+        verify(coffeeMaker).send("C:2:0");
     }
 
     @Test
@@ -80,7 +83,7 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(coffeeOrder);
 
-        Mockito.verify(coffeeMaker).send("M: There is 0.6€ missing");
+        verify(coffeeMaker).send("M: There is 0.6€ missing");
     }
 
     @Test
@@ -89,7 +92,7 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(teaOrder);
 
-        Mockito.verify(coffeeMaker).send("M: There is 0.4€ missing");
+        verify(coffeeMaker).send("M: There is 0.4€ missing");
     }
 
     @Test
@@ -98,7 +101,7 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(order);
 
-        Mockito.verify(coffeeMaker).send("M: There is 0.5€ missing");
+        verify(coffeeMaker).send("M: There is 0.5€ missing");
     }
 
     @Test
@@ -107,7 +110,7 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(order);
 
-        Mockito.verify(coffeeMaker).send("M: There is 0.3€ missing");
+        verify(coffeeMaker).send("M: There is 0.3€ missing");
     }
 
     @Test
@@ -116,7 +119,7 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(order);
 
-        Mockito.verify(coffeeMaker).send("O::");
+        verify(coffeeMaker).send("O::");
     }
 
     @Test
@@ -125,7 +128,7 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(order);
 
-        Mockito.verify(coffeeMaker).send("M: There is 0.4€ missing");
+        verify(coffeeMaker).send("M: There is 0.4€ missing");
     }
 
     @Test
@@ -134,7 +137,7 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(order);
 
-        Mockito.verify(coffeeMaker).send("Ch::");
+        verify(coffeeMaker).send("Ch::");
     }
 
     @Test
@@ -143,6 +146,13 @@ public class CoffeeMachineTest {
 
         coffeeMachine.order(order);
 
-        Mockito.verify(coffeeMaker).send("Hh:1:0");
+        verify(coffeeMaker).send("Hh:1:0");
+    }
+
+    @Test
+    public void should_print_an_empty_report() throws Exception {
+        coffeeMachine.printReport();
+
+        verify(printer).print("Nothing sold yet.");
     }
 }

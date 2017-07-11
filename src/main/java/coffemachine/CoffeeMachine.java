@@ -5,9 +5,13 @@ import java.math.BigDecimal;
 public class CoffeeMachine {
 
     private CoffeeMaker coffeeMaker;
+    private SellsReport sellsReport;
+    private Printer printer;
 
-    public CoffeeMachine(CoffeeMaker coffeeMaker) {
+    public CoffeeMachine(CoffeeMaker coffeeMaker, Printer printer) {
         this.coffeeMaker = coffeeMaker;
+        this.sellsReport = new SellsReport();
+        this.printer = printer;
     }
 
     public void order() {
@@ -62,4 +66,7 @@ public class CoffeeMachine {
     }
 
 
+    public void printReport() {
+        sellsReport.print(printer);
+    }
 }
