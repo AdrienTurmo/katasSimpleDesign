@@ -175,4 +175,15 @@ public class CoffeeMachineTest {
 
         verify(printer).print("Chocolates sold : 1");
     }
+
+    @Test
+    public void should_print_the_fact_that_one_tea_was_sold() throws Exception {
+        Order order = new Order(Drink.Tea,0, false, 1.0);
+        coffeeMachine.order(order);
+
+        coffeeMachine.printReport();
+
+        verify(printer).print("Teas sold : 1");
+    }
+
 }

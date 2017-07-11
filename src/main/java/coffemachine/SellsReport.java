@@ -13,6 +13,9 @@ public class SellsReport {
         if (Objects.equals(soldDrink, Drink.Chocolate)) {
             printer.print("Chocolates sold : 1");
         }
+        if (Objects.equals(soldDrink, Drink.Tea)) {
+            printer.print("Teas sold : 1");
+        }
         printer.print("Nothing sold yet.");
     }
 
