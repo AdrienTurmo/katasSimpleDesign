@@ -186,4 +186,15 @@ public class CoffeeMachineTest {
         verify(printer).print("Teas sold : 1");
     }
 
+    @Test
+    public void should_print_the_fact_that_two_orange_juice_were_sold() throws Exception {
+        Order firstOrder = new Order(Drink.OrangeJuice,0, false, 1.0);
+        Order secondOrder = new Order(Drink.OrangeJuice,0, false, 1.0);
+        coffeeMachine.order(firstOrder);
+        coffeeMachine.order(secondOrder);
+
+        coffeeMachine.printReport();
+
+        verify(printer).print("OrangeJuices sold : 2");
+    }
 }

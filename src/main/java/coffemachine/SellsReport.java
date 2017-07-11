@@ -3,6 +3,7 @@ package coffemachine;
 public class SellsReport {
 
     private Drink soldDrink;
+    private int numberOfDrinksSold = 0;
 
 
     public void print(Printer printer) {
@@ -11,7 +12,7 @@ public class SellsReport {
         if (soldDrink == null) {
             message = "Nothing sold yet.";
         } else {
-            message = soldDrink.name() +"s sold : 1";
+            message = soldDrink.name() +"s sold : " + numberOfDrinksSold;
         }
 
         printer.print(message);
@@ -19,5 +20,6 @@ public class SellsReport {
 
     public void isSold(Drink drink) {
         this.soldDrink = drink;
+        numberOfDrinksSold++;
     }
 }
