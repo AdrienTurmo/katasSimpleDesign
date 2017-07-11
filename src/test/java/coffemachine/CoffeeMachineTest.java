@@ -210,4 +210,12 @@ public class CoffeeMachineTest {
         verify(printer).print("Teas sold : 1");
         verify(printer).print("Coffees sold : 1");
     }
+
+    @Test
+    public void should_print_a_revenue_of_0_if_nothing_was_ordered() throws Exception {
+        coffeeMachine.printReport();
+
+        verify(printer).print("Nothing sold yet.");
+        verify(printer).print("Total earned : 0€");
+    }
 }

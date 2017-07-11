@@ -13,6 +13,7 @@ public class SellsReport {
         } else {
             quantityOfDrinksSold.forEach((drink, integer) -> printer.print(drink.name() + "s sold : " + integer.toString()));
         }
+        printer.print("Total earned : 0€");
     }
 
     public void isSold(Drink drink) {
