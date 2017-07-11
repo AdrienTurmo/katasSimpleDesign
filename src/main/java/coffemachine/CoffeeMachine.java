@@ -30,7 +30,7 @@ public class CoffeeMachine {
         } else {
 
             message = formatOrder(order);
-            sellsReport.isSold(order);
+            sellsReport.isSold(order.getDrink());
 
         }
 

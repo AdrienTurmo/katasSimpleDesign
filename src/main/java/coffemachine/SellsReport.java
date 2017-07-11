@@ -1,25 +1,23 @@
 package coffemachine;
 
-import java.util.Objects;
-
 public class SellsReport {
 
     private Drink soldDrink;
 
+
     public void print(Printer printer) {
-        if (Objects.equals(soldDrink, Drink.Coffee)) {
-            printer.print("Coffees sold : 1");
+        String message;
+
+        if (soldDrink == null) {
+            message = "Nothing sold yet.";
+        } else {
+            message = soldDrink.name() +"s sold : 1";
         }
-        if (Objects.equals(soldDrink, Drink.Chocolate)) {
-            printer.print("Chocolates sold : 1");
-        }
-        if (Objects.equals(soldDrink, Drink.Tea)) {
-            printer.print("Teas sold : 1");
-        }
-        printer.print("Nothing sold yet.");
+
+        printer.print(message);
     }
 
-    public void isSold(Order order) {
-        this.soldDrink = order.getDrink();
+    public void isSold(Drink drink) {
+        this.soldDrink = drink;
     }
 }
