@@ -6,9 +6,9 @@ public enum Drink {
     Coffee("C", 0.6), OrangeJuice("O", 0.6);
 
     private String makerCode;
-    private double price;
+    private Double price;
 
-    Drink(String makerCode, double price) {
+    Drink(String makerCode, Double price) {
         this.makerCode = makerCode;
         this.price = price;
     }
@@ -17,7 +17,7 @@ public enum Drink {
         return makerCode;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 }

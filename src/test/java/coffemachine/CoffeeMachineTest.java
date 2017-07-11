@@ -40,7 +40,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_order_for_a_tea() throws Exception {
-        Order teaOrder = new Order(Drink.Tea, 0, 1);
+        Order teaOrder = new Order(Drink.Tea, 0, (double) 1);
 
         coffeeMachine.order(teaOrder);
 
@@ -49,7 +49,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_order_for_a_chocolate() throws Exception {
-        Order chocolateOrder = new Order(Drink.Chocolate, 0, 1);
+        Order chocolateOrder = new Order(Drink.Chocolate, 0, (double) 1);
 
         coffeeMachine.order(chocolateOrder);
 
@@ -58,7 +58,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_order_for_a_chocolate_with_a_sugar_and_therefore_a_stick() throws Exception {
-        Order chocolateWithASugarOrder = new Order(Drink.Chocolate,1, 1);
+        Order chocolateWithASugarOrder = new Order(Drink.Chocolate,1, (double) 1);
 
         coffeeMachine.order(chocolateWithASugarOrder);
 
@@ -67,7 +67,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_order_for_a_coffee_with_two_sugars_and_therefore_a_stick() throws Exception {
-        Order coffeeWithTwoSugarsOrder = new Order(Drink.Coffee,2, 1);
+        Order coffeeWithTwoSugarsOrder = new Order(Drink.Coffee,2, (double) 1);
 
         coffeeMachine.order(coffeeWithTwoSugarsOrder);
 
@@ -76,7 +76,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_a_message_with_the_price_if_no_money_is_given_for_a_coffee() throws Exception {
-        Order coffeeOrder = new Order(Drink.Coffee,0, 0);
+        Order coffeeOrder = new Order(Drink.Coffee,0, (double) 0);
 
         coffeeMachine.order(coffeeOrder);
 
@@ -85,7 +85,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_a_message_with_the_price_if_no_money_is_given_for_a_tea() throws Exception {
-        Order teaOrder = new Order(Drink.Tea,0, 0);
+        Order teaOrder = new Order(Drink.Tea,0, (double) 0);
 
         coffeeMachine.order(teaOrder);
 
@@ -94,7 +94,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_a_message_with_the_price_if_no_money_is_given_for_a_chocolate() throws Exception {
-        Order order = new Order(Drink.Chocolate,0, 0);
+        Order order = new Order(Drink.Chocolate,0, (double) 0);
 
         coffeeMachine.order(order);
 
@@ -112,10 +112,19 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_a_message_for_an_orange_juice() throws Exception {
-        Order order = new Order(Drink.OrangeJuice,0, 1);
+        Order order = new Order(Drink.OrangeJuice,0, (double) 1);
 
         coffeeMachine.order(order);
 
         Mockito.verify(coffeeMaker).send("O::");
+    }
+
+    @Test
+    public void should_send_a_message_for_an_orange_juice_an_not_enough_money() throws Exception {
+        Order order = new Order(Drink.OrangeJuice,0, 0.2);
+
+        coffeeMachine.order(order);
+
+        Mockito.verify(coffeeMaker).send("M: There is 0.4€ missing");
     }
 }

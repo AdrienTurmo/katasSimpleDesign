@@ -1,5 +1,7 @@
 package coffemachine;
 
+import java.math.BigDecimal;
+
 public class CoffeeMachine {
 
     private CoffeeMaker coffeeMaker;
@@ -13,7 +15,7 @@ public class CoffeeMachine {
     }
 
     public void order(Order order) {
-        double missingMoney = drinkPriceMinusMoneyGiven(order);
+        Double missingMoney = drinkPriceMinusMoneyGiven(order);
 
         if (missingMoney > 0) {
 
@@ -30,8 +32,10 @@ public class CoffeeMachine {
         }
     }
 
-    private double drinkPriceMinusMoneyGiven(Order order) {
-        return order.getDrink().getPrice()-order.getMoneyGiven();
+    private Double drinkPriceMinusMoneyGiven(Order order) {
+        return BigDecimal.valueOf(order.getDrink().getPrice())
+                .subtract(BigDecimal.valueOf(order.getMoneyGiven()))
+                .doubleValue();
     }
 
     private String isAStickNeeded(Order order) {
