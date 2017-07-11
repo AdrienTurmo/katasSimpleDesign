@@ -251,14 +251,15 @@ public class CoffeeMachineTest {
         verify(printer).print("Total earned : 1.2€");
     }
 
-    @Ignore
     @Test
-    public void should_print_the_price_for_one_coffee_and_one_irangeJuice_sold() throws Exception {
-        Order order = new Order(Drink.Coffee,0, false, 1.0);
-        coffeeMachine.order(order);
+    public void should_print_the_price_for_one_tea_and_one_orangeJuice_sold() throws Exception {
+        Order firstOrder = new Order(Drink.Tea,0, false, 1.0);
+        Order secondOrder = new Order(Drink.OrangeJuice,1, false, 1.0);
+        coffeeMachine.order(firstOrder);
+        coffeeMachine.order(secondOrder);
 
         coffeeMachine.printReport();
 
-        verify(printer).print("Total earned : 1.2€");
+        verify(printer).print("Total earned : 1.0€");
     }
 }

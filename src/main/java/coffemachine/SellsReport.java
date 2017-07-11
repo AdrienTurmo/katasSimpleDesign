@@ -15,8 +15,7 @@ public class SellsReport {
             printer.print("Total earned : 0€");
         } else {
             quantityOfDrinksSold.forEach((drink, integer) -> printDrinkWithQuantitySold(printer, drink, integer));
-            int quantity = quantityOfDrinksSold.getOrDefault(Drink.Coffee,1);
-            printer.print("Total earned : " + moneyEarned.multiply(BigDecimal.valueOf(quantity)) + "€");
+            printer.print("Total earned : " + moneyEarned + "€");
         }
     }
 
@@ -27,6 +26,6 @@ public class SellsReport {
     public void isSold(Drink drink) {
         quantityOfDrinksSold.putIfAbsent(drink, Integer.valueOf(0));
         quantityOfDrinksSold.computeIfPresent(drink, (soldDrink, quantity) -> quantity + 1);
-        moneyEarned = BigDecimal.valueOf(drink.getPrice());
+        moneyEarned = moneyEarned.add(BigDecimal.valueOf(drink.getPrice()));
     }
 }
