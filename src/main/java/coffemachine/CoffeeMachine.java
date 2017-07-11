@@ -19,17 +19,27 @@ public class CoffeeMachine {
 
         if (missingMoney > 0) {
 
-            coffeeMaker.send("M: There is " + missingMoney +"€ missing");
+            coffeeMaker.send("M: There is " + missingMoney + "€ missing");
 
         } else {
 
-            String message = String.format("%s:%s:%s"
-                    , order.getDrink().getMakerCode()
-                    , numberOfSugar(order)
-                    , isAStickNeeded(order));
+            String drinkCode = order.getDrink().getMakerCode();
+            String extraHot = isTheDrinkExtraHot(order);
+            String numberOfSugar = numberOfSugar(order);
+            String stick = isAStickNeeded(order);
+
+            String message = String.format("%s%s:%s:%s"
+                    , drinkCode
+                    , extraHot
+                    , numberOfSugar
+                    , stick);
 
             coffeeMaker.send(message);
         }
+    }
+
+    private String isTheDrinkExtraHot(Order order) {
+        return order.isExtraHot() ? "h" : "";
     }
 
     private Double drinkPriceMinusMoneyGiven(Order order) {
