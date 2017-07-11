@@ -109,4 +109,13 @@ public class CoffeeMachineTest {
 
         Mockito.verify(coffeeMaker).send("M: There is 0.3€ missing");
     }
+
+    @Test
+    public void should_send_a_message_for_an_orange_juice() throws Exception {
+        Order order = new Order(Drink.OrangeJuice,0, 1);
+
+        coffeeMachine.order(order);
+
+        Mockito.verify(coffeeMaker).send("O::");
+    }
 }
